@@ -39,7 +39,7 @@ jobs:
         env:
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
           GOOGLE_CREDENTIAL_JSON: ${{ secrets.GOOGLE_CREDENTIAL_JSON }}
-        run: python scripts/fetch_chart_data.py # Execute the Python script to fetch data
+        run: python scripts/fetch_table_data.py # Execute the Python script to fetch data
       # --- End Python related steps ---
 
       - name: Deploy to GitHub Pages # Deploy to GitHub Pages
