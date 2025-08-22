@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Logistics Dashboard</title>
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="Company Logo" class="dashboard-logo">
+            <h1>Insight Logistics Dashboard</h1>
+        </header>
+
+        <!-- The main content area where the slider and table will be injected by JavaScript -->
+        <main id="slider-container" class="w-full h-full">
+            <!-- Initial loading message, will be replaced by the script -->
+            <div class="flex items-center justify-center h-full">
+                <p id="loading-message" class="text-2xl text-gray-500">Loading Shipment Data...</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- The updated JavaScript file that will build the table -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

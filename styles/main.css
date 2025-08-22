@@ -1,0 +1,110 @@
+/* styles/main.css */
+
+/* --- General Body and Layout --- */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Light grey background */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent the main browser scrollbar */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.dashboard-logo {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a365d; /* Dark blue text for the title */
+}
+
+/* --- Main Content & Slider --- */
+#slider-container {
+    width: 100%;
+    flex-grow: 1; /* Allows the container to fill all available vertical space */
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2; /* Ensures the active slide is on top */
+}
+
+/* --- Table Styles --- */
+.table-wrapper {
+    height: 100%;
+    overflow: hidden; /* Hides any overflow within the wrapper */
+    display: flex;
+    flex-direction: column;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    flex-grow: 1; /* Allows the table to expand to the wrapper's height */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #e2e8f0; /* Light grey border for cells */
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 1.1rem; /* Slightly larger font for better readability on a large screen */
+}
+
+.data-table thead {
+    background-color: #1a365d; /* Dark blue header background */
+    color: white;
+    position: sticky; /* Makes the header stick to the top when scrolling within its container */
+    top: 0;
+}
+
+.data-table th {
+    font-weight: 600;
+}
+
+/* Alternating row colors for better readability */
+.data-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: #f7fafc; /* Very light grey for odd rows */
+}
