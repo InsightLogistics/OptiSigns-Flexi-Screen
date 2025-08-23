@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (shipment) {
                     // Each cell contains the full shipment details.
                     rowHtml += `
-                        <td>
+                        <td class="has-data">
                             <div class="shipment-customer">${shipment.customer}</div>
                             <div class="shipment-reference">${shipment.reference}</div>
                             <div class="shipment-arrival">Arrival: ${shipment.arrival}</div>
