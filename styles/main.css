@@ -6,7 +6,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Calibri', sans-serif;
-    background-color: #f8f9fa; /* A very light, clean grey */
+    background-color: #f8f9fa;
     color: #222A23; /* Main text color */
     display: flex;
     flex-direction: column;
@@ -41,32 +41,14 @@ header h1 {
     color: #222A23;
 }
 
-/* --- Main Content & Slider --- */
+/* --- Main Content Container --- */
 #slider-container {
     width: 100%;
     flex-grow: 1;
     position: relative;
     overflow: hidden;
-    padding: 1.5rem; /* Add some padding around the calendar */
+    padding: 1.5rem;
     box-sizing: border-box;
-}
-
-.slide {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    width: calc(100% - 3rem);
-    height: calc(100% - 3rem);
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.slide.active {
-    opacity: 1;
-    z-index: 2;
 }
 
 /* --- Calendar Table Styles --- */
@@ -74,15 +56,16 @@ header h1 {
     height: 100%;
     overflow: hidden;
     display: flex;
-    border: 1px solid #dee2e6; /* Border around the entire table */
+    border: 1px solid #dee2e6;
     border-radius: 8px;
+    background-color: #ffffff;
 }
 
 .data-table {
     width: 100%;
-    border-collapse: separate; /* Use separate for borders inside */
+    border-collapse: separate;
     border-spacing: 0;
-    table-layout: fixed; /* Ensure columns are evenly sized */
+    table-layout: fixed;
 }
 
 .data-table th, .data-table td {
@@ -90,6 +73,7 @@ header h1 {
     border-right: 1px solid #dee2e6;
     padding: 0.5rem;
     vertical-align: top;
+    position: relative;
 }
 
 .data-table th:last-child, .data-table td:last-child {
@@ -100,40 +84,82 @@ header h1 {
     border-bottom: none;
 }
 
+/* Header Styling */
 .data-table thead th {
-    background-color: #FC861E; /* Main orange color */
-    color: white;
-    font-size: 1.1rem;
+    background-color: #f1f3f5; /* Neutral grey background */
+    color: #222A23;
+    font-size: 1rem; /* Reduced font size */
     font-weight: 600;
     text-transform: uppercase;
-    padding: 0.75rem 0.5rem;
+    padding: 0.5rem; /* Reduced padding for a shorter header */
+    text-align: center;
 }
 
+.data-table thead th:first-child {
+    color: #d90429; /* Red for Sunday */
+}
+
+.data-table thead th:last-child {
+    color: #0077b6; /* Blue for Saturday */
+}
+
+/* Cell Styling */
 .data-table td {
-    background-color: #f8f9fa; /* Light background for empty cells */
-    height: 100px; /* Give cells a consistent height */
-}
-
-.data-table td.has-data {
-    background-color: #ffffff; /* White background for cells with data */
+    height: 100px;
+    overflow: hidden; /* Hide overflowing content */
 }
 
 /* --- Shipment Info Styling (inside cells) --- */
+.cell-content {
+    padding: 0.25rem;
+}
+
 .shipment-customer {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 0.9rem;
     color: #222A23;
 }
 
 .shipment-reference {
-    font-size: 0.8rem;
-    color: #6c757d; /* A muted grey for less important info */
+    font-size: 1rem; /* Increased font size */
+    font-weight: bold; /* Make it bold */
+    color: #FC861E; /* Main orange color for emphasis */
     margin-bottom: 6px;
     display: block;
+}
+
+.shipment-dates {
+    display: flex;
+    justify-content: space-between; /* Place arrival and departure side-by-side */
+    width: 100%;
 }
 
 .shipment-arrival,
 .shipment-departure {
     font-size: 0.75rem;
     color: #495057;
+}
+
+/* --- Auto-Scrolling Animation --- */
+@keyframes slow-scroll {
+    0% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(0); /* Pause at the top */
+    }
+    85% {
+        transform: translateY(var(--scroll-height)); /* Scroll down */
+    }
+    100% {
+        transform: translateY(var(--scroll-height)); /* Pause at the bottom */
+    }
+}
+
+.scrolling-content {
+    /* Animation duration is calculated in JS based on content height */
+    animation-name: slow-scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
