@@ -15,7 +15,7 @@ def fetch_and_group_by_day():
     GOOGLE_CREDENTIAL_JSON = os.environ.get("GOOGLE_CREDENTIAL_JSON")
     
     # !!! IMPORTANT: Please verify this is the correct name of your sheet !!!
-    WORKSHEET_NAME = "Container-Movement" 
+    WORKSHEET_NAME = "dashboard" 
     OUTPUT_JSON_PATH = "data/shipments_by_day.json"
 
     # --- Column Index Mapping ---
