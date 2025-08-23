@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURATION ---
     const DATA_URL = 'data/shipments_by_day.json';
-    // This now controls how many ROWS of the weekly grid are shown per slide.
-    const ROWS_PER_SLIDE = 10; 
-    const SLIDER_INTERVAL = 10000; // 10 seconds
 
     /**
      * Fetches data and initiates the grid table creation.
@@ -27,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 loadingMessage.style.display = 'none';
             }
 
-            // Build the new grid-based slides
-            createGridSlides(dataByDay);
+            // Build the new grid table
+            createAndAnimateGrid(dataByDay);
 
         } catch (error) {
             console.error('Failed to load shipment data:', error);
@@ -37,16 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Creates slides with a 7-column weekly grid table.
+     * Creates a single, static 7-column grid table and initiates scrolling animations.
      * @param {object} data - The shipment data grouped by day of the week.
      */
-    function createGridSlides(data) {
+    function createAndAnimateGrid(data) {
         const container = document.getElementById('slider-container');
         container.innerHTML = ''; // Clear loading message
 
         const daysOrder = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         
-        // Find the maximum number of shipments on any single day to determine the total number of rows needed.
         let maxRows = 0;
         daysOrder.forEach(day => {
             const dayCount = data[day] ? data[day].length : 0;
@@ -60,92 +56,80 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Generate all the HTML table rows for the entire grid.
-        const allGridRows = [];
+        const tableWrapper = document.createElement('div');
+        tableWrapper.className = 'table-wrapper';
+
+        const table = document.createElement('table');
+        table.className = 'data-table';
+
+        table.innerHTML = `
+            <thead>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+        `;
+
+        const tbody = document.createElement('tbody');
         for (let i = 0; i < maxRows; i++) {
-            let rowHtml = '<tr>';
+            const tr = document.createElement('tr');
+            let rowHtml = '';
             daysOrder.forEach(day => {
                 const shipment = data[day] ? data[day][i] : null;
                 if (shipment) {
-                    // Each cell contains the full shipment details.
                     rowHtml += `
                         <td class="has-data">
-                            <div class="shipment-customer">${shipment.customer}</div>
-                            <div class="shipment-reference">${shipment.reference}</div>
-                            <div class="shipment-arrival">Arrival: ${shipment.arrival}</div>
-                            <div class="shipment-departure">Departure: ${shipment.departure}</div>
+                            <div class="cell-content">
+                                <div class="shipment-customer">${shipment.customer}</div>
+                                <div class="shipment-reference">${shipment.reference}</div>
+                                <div class="shipment-dates">
+                                    <span class="shipment-arrival">Arrival: ${shipment.arrival}</span>
+                                    <span class="shipment-departure">Departure: ${shipment.departure}</span>
+                                </div>
+                            </div>
                         </td>`;
                 } else {
-                    rowHtml += '<td></td>'; // Add an empty cell if no shipment exists for this slot.
+                    rowHtml += '<td></td>';
                 }
             });
-            rowHtml += '</tr>';
-            allGridRows.push(rowHtml);
-        }
-
-        // Create slides, each containing a chunk of the grid rows.
-        for (let i = 0; i < allGridRows.length; i += ROWS_PER_SLIDE) {
-            const slideChunk = allGridRows.slice(i, i + ROWS_PER_SLIDE);
-            
-            const slide = document.createElement('div');
-            slide.className = 'slide';
-
-            const tableWrapper = document.createElement('div');
-            tableWrapper.className = 'table-wrapper';
-
-            const table = document.createElement('table');
-            table.className = 'data-table';
-
-            // Create the 7-day table header.
-            table.innerHTML = `
-                <thead>
-                    <tr>
-                        <th>Sunday</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                    </tr>
-                </thead>
-            `;
-
-            const tbody = document.createElement('tbody');
-            tbody.innerHTML = slideChunk.join(''); // Add the generated rows to the table body
-            table.appendChild(tbody);
-            
-            tableWrapper.appendChild(table);
-            slide.appendChild(tableWrapper);
-            container.appendChild(slide);
+            tr.innerHTML = rowHtml;
+            tbody.appendChild(tr);
         }
         
-        setupSlider();
+        table.appendChild(tbody);
+        tableWrapper.appendChild(table);
+        container.appendChild(tableWrapper);
+        
+        // After the table is in the DOM, start the animations
+        startScrollingAnimations();
     }
 
     /**
-     * Initializes and controls the automatic slide transitions.
+     * Finds all overflowing cells and applies a dynamic scrolling animation.
      */
-    function setupSlider() {
-        const slides = document.querySelectorAll('#slider-container .slide');
-        if (slides.length === 0) return;
-
-        let currentSlide = 0;
-
-        const showSlide = (index) => {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        };
-
-        showSlide(currentSlide);
-
-        if (slides.length > 1) {
-            setInterval(() => {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }, SLIDER_INTERVAL);
-        }
+    function startScrollingAnimations() {
+        const cells = document.querySelectorAll('.data-table td.has-data');
+        cells.forEach(cell => {
+            const content = cell.querySelector('.cell-content');
+            // Check if the content's actual height is greater than the cell's visible height
+            if (content.scrollHeight > cell.clientHeight) {
+                const scrollDistance = -(content.scrollHeight - cell.clientHeight);
+                
+                // Calculate animation duration based on how much content is hidden.
+                // This makes longer lists scroll for a longer time.
+                const duration = Math.abs(scrollDistance) * 0.1; // Adjust 0.1 to make scroll faster/slower
+                
+                content.style.setProperty('--scroll-height', `${scrollDistance}px`);
+                content.style.animationDuration = `${Math.max(10, duration)}s`; // Minimum 10 seconds duration
+                content.classList.add('scrolling-content');
+            }
+        });
     }
 
     // Initial call to start the process.
