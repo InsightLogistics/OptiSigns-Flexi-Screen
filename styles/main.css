@@ -5,11 +5,12 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f0f2f5; /* Light grey background */
+    font-family: 'Calibri', sans-serif;
+    background-color: #f8f9fa; /* A very light, clean grey */
+    color: #222A23; /* Main text color */
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Prevent the main browser scrollbar */
+    overflow: hidden;
 }
 
 .container {
@@ -23,10 +24,10 @@ body, html {
 header {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    flex-shrink: 0; /* Prevent header from shrinking */
+    border-bottom: 1px solid #dee2e6;
+    flex-shrink: 0;
 }
 
 .dashboard-logo {
@@ -37,74 +38,102 @@ header {
 header h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1a365d; /* Dark blue text for the title */
+    color: #222A23;
 }
 
 /* --- Main Content & Slider --- */
 #slider-container {
     width: 100%;
-    flex-grow: 1; /* Allows the container to fill all available vertical space */
+    flex-grow: 1;
     position: relative;
     overflow: hidden;
+    padding: 1.5rem; /* Add some padding around the calendar */
+    box-sizing: border-box;
 }
 
 .slide {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
     z-index: 1;
-    padding: 2rem;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
 .slide.active {
     opacity: 1;
-    z-index: 2; /* Ensures the active slide is on top */
+    z-index: 2;
 }
 
-/* --- Table Styles --- */
+/* --- Calendar Table Styles --- */
 .table-wrapper {
     height: 100%;
-    overflow: hidden; /* Hides any overflow within the wrapper */
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
+    border: 1px solid #dee2e6; /* Border around the entire table */
+    border-radius: 8px;
 }
 
 .data-table {
     width: 100%;
-    border-collapse: collapse;
-    flex-grow: 1; /* Allows the table to expand to the wrapper's height */
+    border-collapse: separate; /* Use separate for borders inside */
+    border-spacing: 0;
+    table-layout: fixed; /* Ensure columns are evenly sized */
 }
 
 .data-table th, .data-table td {
-    border: 1px solid #e2e8f0; /* Light grey border for cells */
-    padding: 0.75rem 1rem;
-    text-align: left;
-    font-size: 1.1rem; /* Slightly larger font for better readability on a large screen */
+    border-bottom: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    padding: 0.5rem;
+    vertical-align: top;
 }
 
-.data-table thead {
-    background-color: #1a365d; /* Dark blue header background */
+.data-table th:last-child, .data-table td:last-child {
+    border-right: none;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table thead th {
+    background-color: #FC861E; /* Main orange color */
     color: white;
-    position: sticky; /* Makes the header stick to the top when scrolling within its container */
-    top: 0;
-}
-
-.data-table th {
+    font-size: 1.1rem;
     font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.75rem 0.5rem;
 }
 
-/* Alternating row colors for better readability */
-.data-table tbody tr:nth-child(even) {
-    background-color: #ffffff;
+.data-table td {
+    background-color: #f8f9fa; /* Light background for empty cells */
+    height: 100px; /* Give cells a consistent height */
 }
 
-.data-table tbody tr:nth-child(odd) {
-    background-color: #f7fafc; /* Very light grey for odd rows */
+.data-table td.has-data {
+    background-color: #ffffff; /* White background for cells with data */
+}
+
+/* --- Shipment Info Styling (inside cells) --- */
+.shipment-customer {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #222A23;
+}
+
+.shipment-reference {
+    font-size: 0.8rem;
+    color: #6c757d; /* A muted grey for less important info */
+    margin-bottom: 6px;
+    display: block;
+}
+
+.shipment-arrival,
+.shipment-departure {
+    font-size: 0.75rem;
+    color: #495057;
 }
