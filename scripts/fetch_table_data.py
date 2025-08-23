@@ -7,23 +7,24 @@ import sys
 
 def fetch_and_group_by_day():
     """
-    Fetches data from a Google Sheet, processes each row to extract shipment
-    details, groups the data by the day of the week, and saves it as a JSON file.
+    Fetches data from a Google Sheet by reading specific columns, processes it,
+    groups the data by the day of the week, and saves it as a JSON file.
     """
     # --- Configuration ---
     SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
     GOOGLE_CREDENTIAL_JSON = os.environ.get("GOOGLE_CREDENTIAL_JSON")
     
     # !!! IMPORTANT: Please verify this is the correct name of your sheet !!!
-    WORKSHEET_NAME = "dashboard" 
+    WORKSHEET_NAME = "Container-Movement" 
     OUTPUT_JSON_PATH = "data/shipments_by_day.json"
 
-    # --- Pre-computation and Setup ---
-    DAYS_OF_WEEK = [
-        "Monday", "Tuesday", "Wednesday", "Thursday",
-        "Friday", "Saturday", "Sunday"
-    ]
-    DAY_REGEX = re.compile(r'(\b(?:' + '|'.join(DAYS_OF_WEEK) + r')\b)\s*$', re.IGNORECASE)
+    # --- Column Index Mapping ---
+    # A=0, B=1, C=2, D=3, E=4
+    CUSTOMER_COL = 0
+    REFERENCE_COL = 1
+    ARRIVAL_COL = 2
+    DEPARTURE_COL = 3
+    DAY_COL = 4
     
     # --- Input Validation ---
     if not SPREADSHEET_ID or not GOOGLE_CREDENTIAL_JSON:
@@ -45,47 +46,40 @@ def fetch_and_group_by_day():
         print(f"Successfully fetched {len(all_rows)} rows from the sheet.")
 
         # --- Data Processing ---
-        data_by_day = {day: [] for day in DAYS_OF_WEEK}
+        data_by_day = {
+            "Monday": [], "Tuesday": [], "Wednesday": [], "Thursday": [],
+            "Friday": [], "Saturday": [], "Sunday": []
+        }
         processed_rows = 0
 
-        print("Processing rows and grouping by day...")
-        for i, row_cells in enumerate(all_rows):
-            line = " ".join(filter(None, row_cells)).strip()
-
-            if not line:
+        print("Processing rows by reading specific columns...")
+        # Start from the second row to skip headers, if any.
+        for i, row in enumerate(all_rows[1:]):
+            # Ensure the row has enough columns to avoid errors
+            if len(row) <= DAY_COL:
+                # print(f"Warning: Skipping row {i+2} due to insufficient columns.")
                 continue
 
-            match = DAY_REGEX.search(line)
+            # Extract data directly from columns
+            customer = row[CUSTOMER_COL].strip()
+            reference = row[REFERENCE_COL].strip()
+            arrival = row[ARRIVAL_COL].strip()
+            departure = row[DEPARTURE_COL].strip()
+            day = row[DAY_COL].strip().capitalize()
 
-            if not match:
-                # This is just a warning, not a critical error
-                # print(f"Warning: Could not find a day of the week in row {i+1}. Skipping. Content: '{line}'")
+            # Skip if the essential 'day' column is empty
+            if not day:
                 continue
 
-            day = match.group(1).capitalize()
-            content_part = line[:match.start()].strip()
-            dates = re.findall(r'\d{1,2}/\d{1,2}/\d{4}', content_part)
-            
-            arrival = dates[0] if dates else None
-            departure = None
-            if len(dates) > 1:
-                departure = dates[1]
-            elif 'TBD' in content_part.upper():
-                departure = 'TBD'
-
-            customer_reference = content_part
-            for date in dates:
-                customer_reference = customer_reference.replace(date, '')
-            
-            customer_reference = re.sub(r'\bTBD\b', '', customer_reference, flags=re.IGNORECASE)
-            customer_reference = re.sub(r'\s+', ' ', customer_reference).strip(' -')
-
+            # Create the record for JSON output
             record = {
-                "customer_reference": customer_reference,
-                "arrival": arrival,
-                "departure": departure
+                "customer": customer or "N/A",
+                "reference": reference or "N/A",
+                "arrival": arrival or "N/A",
+                "departure": departure or "N/A"
             }
             
+            # Group the record by the day of the week
             if day in data_by_day:
                 data_by_day[day].append(record)
                 processed_rows += 1
@@ -108,7 +102,7 @@ def fetch_and_group_by_day():
             print(f"SUCCESS: JSON file saved successfully at '{OUTPUT_JSON_PATH}'.")
         else:
             print(f"FAILURE: File was NOT created at '{OUTPUT_JSON_PATH}'.")
-            sys.exit(1) # Exit with an error code to fail the workflow step
+            sys.exit(1)
 
     except gspread.exceptions.WorksheetNotFound:
         print(f"CRITICAL ERROR: Worksheet '{WORKSHEET_NAME}' not found in the spreadsheet.")
