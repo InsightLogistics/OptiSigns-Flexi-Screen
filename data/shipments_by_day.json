@@ -1,0 +1,600 @@
+{
+    "Monday": [
+        {
+            "customer_reference": "OP2 BEAU6277089",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 BEAU6284175",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 BISU8494041",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8048313",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8087140",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8241446",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU9076006",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU9542784",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4394619",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4524224",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4526211",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4587500",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU7948885",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU8853927",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 DFSU7773032",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 DRYU9140773",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 GAOU6021085",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 GESU4730280",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SELU4009521",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SELU4024790",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SELU4031171",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1002138",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1002396",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1020173",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1027645",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1029951",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1033118",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1064130",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1097088",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1105481",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1106343",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1143049",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1144071",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1159256",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1162012",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1168480",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1173146",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1177199",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1181537",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1183479",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1185229",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1192830",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1209969",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1225213",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1236305",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1236603",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1241873",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1259337",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1288171",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1311800",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU7017958",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 TGHU8431779",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU5250383",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8031500",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4236819",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 DRYU9652851",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SELU4033596",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1116927",
+            "arrival": "8/25/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "KAI MEDIA 1Z654A520325480018",
+            "arrival": "8/25/2025",
+            "departure": null
+        },
+        {
+            "customer_reference": "KAI MEDIA",
+            "arrival": "8/25/2025",
+            "departure": null
+        },
+        {
+            "customer_reference": "OP2 BEAU6274583",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8045470",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8045870",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU8720855",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU9399436",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU9512671",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAAU9516620",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4242956",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU4446219",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU9914328",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU9920819",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CAIU9953237",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 CCLU6767727",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 DFSU7069281",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 DRYU9656292",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 GAOU6020432",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SDCU1707789",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1041915",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1061090",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1061275",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1082920",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1092701",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1105028",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1132194",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1152009",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1160220",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1162331",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1190781",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1192064",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1257397",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1258074",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1259830",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP2 SMCU1264164",
+            "arrival": "9/1/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP4 EGSU2125019",
+            "arrival": "8/25/2025",
+            "departure": null
+        },
+        {
+            "customer_reference": "KAI MEDIA 994-31605630",
+            "arrival": "8/25/2025",
+            "departure": null
+        }
+    ],
+    "Tuesday": [
+        {
+            "customer_reference": "KAI MEDIA YMLU3454994",
+            "arrival": "8/26/2025",
+            "departure": null
+        }
+    ],
+    "Wednesday": [
+        {
+            "customer_reference": "TFA",
+            "arrival": "8/27/2025",
+            "departure": null
+        },
+        {
+            "customer_reference": "OP3 WHSU6561094",
+            "arrival": "8/27/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "TFA",
+            "arrival": "8/27/2025",
+            "departure": null
+        }
+    ],
+    "Thursday": [
+        {
+            "customer_reference": "FREESIZE",
+            "arrival": "8/21/2025",
+            "departure": null
+        }
+    ],
+    "Friday": [
+        {
+            "customer_reference": "OP3 FFAU2704716",
+            "arrival": "8/21/2025",
+            "departure": "8/22/2025"
+        },
+        {
+            "customer_reference": "OP2 KDCU5170241",
+            "arrival": "8/13/2025",
+            "departure": "8/22/2025"
+        },
+        {
+            "customer_reference": "OP2 SMCU1070868",
+            "arrival": "8/19/2025",
+            "departure": "8/22/2025"
+        }
+    ],
+    "Saturday": [],
+    "Sunday": [
+        {
+            "customer_reference": "OP3 BEAU5422536",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 TCLU6517088",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU2021699",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 BEAU6279380",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 CAIU7883486",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 CAIU9919171",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU1057871",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU1138700",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU1161989",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU1251911",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU7021222",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 AXIU1629205",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU1029822",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        },
+        {
+            "customer_reference": "OP3 SMCU1196120",
+            "arrival": "8/24/2025",
+            "departure": "TBD"
+        }
+    ]
+}
