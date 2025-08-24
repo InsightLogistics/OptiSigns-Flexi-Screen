@@ -1,48 +1,72 @@
 /* styles/main.css */
 
 /* --- General Body and Layout --- */
-body, html {
-    width: 5333px;
-    height: 3000px;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Calibri', sans-serif;
-    background-color: #f8f9fa; /* This is the gray background */
-    color: #222A23; /* Main text color */
-    overflow: hidden; /* Hide scrollbars */
-    display: flex; /* Make the body a flex container */
-    flex-direction: column; /* Arrange children vertically */
+    background-color: #222; /* Dark background for contrast */
+    color: #222A23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* --- Aspect Ratio Wrapper --- */
+.aspect-ratio-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw; /* 9 / 16 = 0.5625, for 16:9 ratio */
+    max-height: 100vh;
+    max-width: 177.78vh; /* 16 / 9 = 1.7778 */
+    margin: auto;
+    background-color: #f8f9fa; /* The gray background is now on the wrapper */
+}
+
+/* --- Main Content Container --- */
+.content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* --- Header --- */
 header {
-    /* The white background and border have been removed */
-    background-color: transparent; 
-    width: 100%;
-    padding: 0.75rem 2rem;
-    box-sizing: border-box; /* Ensures padding is included in the width */
-    flex-shrink: 0; /* Prevent header from shrinking */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .dashboard-logo {
-    height: 40px;
-    margin-right: 1rem;
+    height: 50px; /* Adjusted for better visibility */
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Adjusted for better visibility */
     font-weight: 700;
     color: #222A23;
 }
 
-/* --- Main Content Container --- */
+/* --- Main Content Area (#slider-container) --- */
 #slider-container {
-    width: 100%;
-    flex-grow: 1; /* Allow this container to grow and fill available space */
-    position: relative;
-    overflow: hidden;
-    padding: 1.5rem;
+    flex-grow: 1;
+    padding: 0 2rem 2rem 2rem; /* Padding adjusted */
     box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff; /* White background for the main content box */
+    border-radius: 8px;
+    margin: 0 2rem;
 }
 
 /* --- Calendar Table Styles --- */
@@ -50,9 +74,6 @@ header h1 {
     height: 100%;
     overflow: hidden;
     display: flex;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    background-color: #ffffff;
 }
 
 .data-table {
@@ -80,80 +101,50 @@ header h1 {
 
 /* Header Styling */
 .data-table thead th {
-    background-color: #f1f3f5; /* Neutral grey background */
+    background-color: #f1f3f5;
     color: #222A23;
-    font-size: 1rem; /* Reduced font size */
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 0.5rem; /* Reduced padding for a shorter header */
+    padding: 0.5rem;
     text-align: center;
 }
 
-.data-table thead th:first-child {
-    color: #d90429; /* Red for Sunday */
-}
-
-.data-table thead th:last-child {
-    color: #0077b6; /* Blue for Saturday */
-}
+.data-table thead th:first-child { color: #d90429; }
+.data-table thead th:last-child { color: #0077b6; }
 
 /* Cell Styling */
 .data-table td {
     height: 100px;
-    overflow: hidden; /* Hide overflowing content */
+    overflow: hidden;
 }
 
 /* --- Shipment Info Styling (inside cells) --- */
-.cell-content {
-    padding: 0.25rem;
-}
-
-.shipment-customer {
-    font-weight: normal;
-    font-size: 0.9rem;
-    color: #222A23;
-}
-
+.cell-content { padding: 0.25rem; }
+.shipment-customer { font-size: 0.9rem; }
 .shipment-reference {
-    font-size: 1rem; /* Increased font size */
-    font-weight: bold; /* Make it bold */
-    color: #FC861E; /* Main orange color for emphasis */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FC861E;
     margin-bottom: 6px;
     display: block;
 }
-
 .shipment-dates {
     display: flex;
-    justify-content: space-between; /* Place arrival and departure side-by-side */
+    justify-content: space-between;
     width: 100%;
 }
-
-.shipment-arrival,
-.shipment-departure {
+.shipment-arrival, .shipment-departure {
     font-size: 0.75rem;
     color: #495057;
 }
 
 /* --- Auto-Scrolling Animation --- */
 @keyframes slow-scroll {
-    0% {
-        transform: translateY(0);
-    }
-    15% {
-        transform: translateY(0); /* Pause at the top */
-    }
-    85% {
-        transform: translateY(var(--scroll-height)); /* Scroll down */
-    }
-    100% {
-        transform: translateY(var(--scroll-height)); /* Pause at the bottom */
-    }
+    0%, 15% { transform: translateY(0); }
+    85%, 100% { transform: translateY(var(--scroll-height)); }
 }
 
 .scrolling-content {
-    /* Animation duration is calculated in JS based on content height */
-    animation-name: slow-scroll;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: slow-scroll linear infinite alternate;
 }
