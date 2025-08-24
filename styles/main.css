@@ -10,6 +10,8 @@ body, html {
     background-color: #f8f9fa; /* This is the gray background */
     color: #222A23; /* Main text color */
     overflow: hidden; /* Hide scrollbars */
+    display: flex; /* Make the body a flex container */
+    flex-direction: column; /* Arrange children vertically */
 }
 
 /* --- Header --- */
@@ -19,6 +21,7 @@ header {
     width: 100%;
     padding: 0.75rem 2rem;
     box-sizing: border-box; /* Ensures padding is included in the width */
+    flex-shrink: 0; /* Prevent header from shrinking */
 }
 
 .dashboard-logo {
@@ -35,7 +38,7 @@ header h1 {
 /* --- Main Content Container --- */
 #slider-container {
     width: 100%;
-    flex-grow: 1;
+    flex-grow: 1; /* Allow this container to grow and fill available space */
     position: relative;
     overflow: hidden;
     padding: 1.5rem;
