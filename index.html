@@ -13,18 +13,19 @@
 </head>
 <body class="bg-gray-100 font-['Inter']">
     <div class="container mx-auto p-4">
-        <!-- The header now uses Flexbox to position the title and logo -->
-        <header class="flex items-center justify-between rounded-lg bg-white p-4 shadow">
-            <!-- Title is now the first item -->
-            <h1 class="text-xl font-semibold text-gray-800">Flexi Distribution Container Dashboard</h1>
-            <!-- Logo is the second item, pushed to the far right by justify-between -->
+        <!-- Header is now on the gray background, with margin-bottom for spacing -->
+        <header class="flex items-center justify-between mb-4">
+            <!-- Title -->
+            <h1 class="text-2xl font-bold text-gray-800">Flexi Distribution Container Dashboard</h1>
+            <!-- Logo -->
             <img src="images/flexi_logo.png" alt="Company Logo" class="h-12">
         </header>
 
         <!-- The main content area where the slider and table will be injected by JavaScript -->
-        <main id="slider-container" class="w-full mt-4">
+        <!-- This outer div acts as the white, rounded rectangle container -->
+        <main id="slider-container" class="w-full bg-white rounded-lg shadow p-4">
             <!-- Initial loading message, will be replaced by the script -->
-            <div class="flex items-center justify-center h-64 bg-white rounded-lg shadow">
+            <div class="flex items-center justify-center h-full">
                 <p id="loading-message" class="text-2xl text-gray-500">Loading Shipment Data...</p>
             </div>
         </main>
