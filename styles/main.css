@@ -12,15 +12,15 @@ html, body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* Set a base font size that scales with the viewport width. All 'rem' units will be based on this. */
-    font-size: 1vw; 
+    /* STABILITY FIX: Base font size now scales with viewport HEIGHT (vh), which is reliable in the OptiSigns environment. */
+    font-size: 1.5vh; 
 }
 
 /* --- Aspect Ratio Wrapper --- */
 .aspect-ratio-wrapper {
     position: relative;
-    width: 98%; /* Use percentage for better compatibility */
-    max-width: 177vh; /* 16/9 aspect ratio based on height */
+    /* STABILITY FIX: Define size based on height, then use aspect-ratio to calculate width. */
+    height: 98%; /* Use a percentage of the body's height */
     margin: auto;
     aspect-ratio: 16 / 9; /* The most reliable way to maintain aspect ratio */
     background-color: #f8f9fa;
