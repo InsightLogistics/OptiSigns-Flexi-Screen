@@ -53,7 +53,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem; /* SCALABLE: Use rem */
+    font-size: 2.2rem; /* SCALABLE: Use rem, Reduced from 2.5rem */
     font-weight: 700;
     color: #222A23;
 }
@@ -97,7 +97,7 @@ header h1 {
     background-color: #f1f3f5;
     color: #222A23;
     font-weight: 600;
-    font-size: 1.5rem; /* SCALABLE: Use rem */
+    font-size: 1.3rem; /* SCALABLE: Use rem, Reduced from 1.5rem */
     text-align: center;
     vertical-align: middle;
     border-right: 1px solid #dee2e6;
@@ -135,17 +135,17 @@ header h1 {
 }
 
 .shipment-customer {
-    font-size: 1.4rem; /* SCALABLE: Use rem */
+    font-size: 1.2rem; /* SCALABLE: Use rem, Reduced from 1.4rem */
 }
 
 .shipment-reference {
-    font-size: 1.6rem; /* SCALABLE: Use rem */
+    font-size: 1.4rem; /* SCALABLE: Use rem, Reduced from 1.6rem */
     font-weight: bold;
     color: #FC861E;
 }
 
 .shipment-dates {
-    font-size: 1.1rem; /* SCALABLE: Use rem */
+    font-size: 1.0rem; /* SCALABLE: Use rem, Reduced from 1.1rem */
     color: #495057;
     display: flex;
     justify-content: space-between;
