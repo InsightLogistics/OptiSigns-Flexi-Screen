@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURATION ---
-    // Reverted to the original DATA_URL as requested.
     const DATA_URL = 'data/shipments_by_day.json';
 
     /**
@@ -18,24 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            // The data is expected to be an object with days as keys.
-            // e.g., { "Sunday": [...], "Monday": [...], ... }
             const dataByDay = await response.json();
 
-            // Hide the initial loading message
             const loadingMessage = document.getElementById('loading-message');
             if (loadingMessage) {
                 loadingMessage.parentElement.style.display = 'none';
             }
 
-            // **MODIFICATION**: Convert the object of arrays into a single flat array.
-            // This makes the original data structure compatible with the new processing logic.
             const allShipments = Object.values(dataByDay).flat();
-
-            // Process and group the data by the new date categories
             const groupedData = processAndGroupShipments(allShipments);
-
-            // Build the new vertical table
             createVerticalTable(groupedData);
 
         } catch (error) {
@@ -45,61 +35,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Groups all shipments into 9 date-based categories.
+     * Groups all shipments into 9 date-based categories with new date formats.
      * @param {Array} allShipments - A flat array of all shipment objects.
      * @returns {Array} An array of 9 objects, each with a title and a list of shipments.
      */
     function processAndGroupShipments(allShipments) {
         const today = new Date();
-        today.setHours(0, 0, 0, 0); // Normalize today's date to midnight for accurate comparisons
+        today.setHours(0, 0, 0, 0);
 
-        // Create 9 "buckets" to hold shipments for each row
-        const groups = [
-            { title: "Overdue", shipments: [] }, // 0: Past
-            { title: "Today", shipments: [] },   // 1: Today
-            { title: "D+1", shipments: [] },     // 2: Tomorrow
-            { title: "D+2", shipments: [] },
-            { title: "D+3", shipments: [] },
-            { title: "D+4", shipments: [] },
-            { title: "D+5", shipments: [] },
-            { title: "D+6", shipments: [] },
-            { title: "Future", shipments: [] }  // 8: D+7 and beyond
-        ];
+        const formatDateWithDay = (date) => {
+            const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+            const month = (date.getMonth() + 1).toString().padStart(2, '0');
+            const dayOfMonth = date.getDate().toString().padStart(2, '0');
+            const dayOfWeek = days[date.getDay()];
+            return `${month}/${dayOfMonth}(${dayOfWeek})`;
+        };
+
+        const groups = [];
+        // Create date headers from yesterday (i=-1) to D+7 (i=7)
+        const dateHeaders = [];
+        for (let i = -1; i <= 7; i++) {
+            const date = new Date(today);
+            date.setDate(today.getDate() + i);
+            dateHeaders.push(formatDateWithDay(date));
+        }
+
+        // Initialize groups with the new title format
+        groups.push({ title: `~ ${dateHeaders[0]}`, shipments: [] }); // Overdue (~ Yesterday)
+        groups.push({ title: dateHeaders[1], shipments: [] });      // Today
+        for (let i = 2; i <= 7; i++) { // D+1 to D+6
+            groups.push({ title: dateHeaders[i], shipments: [] });
+        }
+        groups.push({ title: `${dateHeaders[8]} ~`, shipments: [] }); // Future (D+7 ~)
 
         allShipments.forEach(shipment => {
-            // Use arrival date, fallback to departure date
             const dateStr = shipment.arrival || shipment.departure;
-            if (!dateStr) return; // Skip if no date is available
+            if (!dateStr) return;
 
             const shipmentDate = new Date(dateStr);
-            shipmentDate.setHours(0, 0, 0, 0); // Normalize shipment date
+            shipmentDate.setHours(0, 0, 0, 0);
 
             const diffTime = shipmentDate - today;
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
             if (diffDays < 0) {
-                groups[0].shipments.push(shipment); // Overdue
+                groups[0].shipments.push(shipment);
             } else if (diffDays === 0) {
-                groups[1].shipments.push(shipment); // Today
+                groups[1].shipments.push(shipment);
             } else if (diffDays >= 1 && diffDays <= 6) {
-                groups[diffDays + 1].shipments.push(shipment); // D+1 to D+6
+                groups[diffDays + 1].shipments.push(shipment);
             } else if (diffDays >= 7) {
-                groups[8].shipments.push(shipment); // Future
+                groups[8].shipments.push(shipment);
             }
         });
-
-        // Add formatted dates to titles for D+1 to D+6
-        for (let i = 2; i <= 7; i++) {
-             const date = new Date(today);
-             date.setDate(today.getDate() + (i - 1));
-             const dateString = `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
-             groups[i].title = `D+${i - 1}<br><span style="font-size: 1rem;">(${dateString})</span>`;
-        }
-        
-        const todayDate = new Date(today);
-        const todayDateString = `${(todayDate.getMonth() + 1).toString().padStart(2, '0')}/${todayDate.getDate().toString().padStart(2, '0')}`;
-        groups[1].title = `Today<br><span style="font-size: 1rem;">(${todayDateString})</span>`;
-
 
         return groups;
     }
@@ -110,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function createVerticalTable(groupedData) {
         const container = document.getElementById('slider-container');
-        container.innerHTML = ''; // Clear container
+        container.innerHTML = '';
 
         const tableWrapper = document.createElement('div');
         tableWrapper.className = 'vertical-table-wrapper';
@@ -122,38 +110,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         groupedData.forEach(group => {
             const tr = document.createElement('tr');
-
-            // 1. Create Date Header Cell (<th>)
             const th = document.createElement('th');
             th.className = 'date-header-cell';
             th.innerHTML = group.title;
             tr.appendChild(th);
 
-            // 2. Create Shipment Data Cell (<td>)
             const td = document.createElement('td');
             td.className = 'shipment-data-cell';
 
-            // 3. Create the scrolling container inside the <td>
             const itemsContainer = document.createElement('div');
             itemsContainer.className = 'shipment-items-container';
 
-            // 4. Populate with shipment items
             if (group.shipments.length > 0) {
                 group.shipments.forEach(shipment => {
                     const item = document.createElement('div');
                     item.className = 'shipment-item';
+                    // Changed Arr to ETA and Dep to ETD
                     item.innerHTML = `
                         <div class="shipment-customer">${shipment.customer || ''}</div>
                         <div class="shipment-reference">${shipment.reference || ''}</div>
                         <div class="shipment-dates">
-                            <span>Arr: ${shipment.arrival || 'N/A'}</span>
-                            <span>Dep: ${shipment.departure || 'N/A'}</span>
+                            <span>ETA: ${shipment.arrival || 'N/A'}</span>
+                            <span>ETD: ${shipment.departure || 'N/A'}</span>
                         </div>
                     `;
                     itemsContainer.appendChild(item);
                 });
             } else {
-                 itemsContainer.innerHTML = `<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>`;
+                itemsContainer.innerHTML = `<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>`;
             }
 
             td.appendChild(itemsContainer);
@@ -165,26 +149,32 @@ document.addEventListener('DOMContentLoaded', () => {
         tableWrapper.appendChild(table);
         container.appendChild(tableWrapper);
 
-        // After the table is in the DOM, check for overflows and start animations
         startHorizontalScrolling();
     }
 
     /**
-     * Finds overflowing rows and applies a horizontal scrolling animation.
+     * Finds overflowing rows, duplicates content for a seamless loop, and applies animation.
      */
     function startHorizontalScrolling() {
         const containers = document.querySelectorAll('.shipment-items-container');
         containers.forEach(container => {
-            // Check if the content's total width is greater than the cell's visible width
             if (container.scrollWidth > container.clientWidth) {
-                const scrollDistance = -(container.scrollWidth - container.clientWidth);
+                // Duplicate items for a seamless loop
+                const originalItems = Array.from(container.children);
+                originalItems.forEach(item => {
+                    container.appendChild(item.cloneNode(true));
+                });
 
-                // Calculate animation duration based on how much content is hidden.
-                const duration = Math.abs(scrollDistance) * 0.05; // Adjust 0.05 to make scroll faster/slower
+                // The distance to scroll is now half of the new total width
+                const scrollDistance = -container.scrollWidth / 2;
+                
+                // The rate of scroll (pixels per second) is constant
+                const scrollRate = 50; // 50 pixels per second, adjust as needed
+                const duration = Math.abs(scrollDistance) / scrollRate;
 
+                // Set animation properties directly in JS for a non-alternating loop
                 container.style.setProperty('--scroll-width', `${scrollDistance}px`);
-                container.style.animationDuration = `${Math.max(15, duration)}s`; // Minimum 15 seconds duration
-                container.classList.add('scrolling-content');
+                container.style.animation = `horizontal-scroll ${duration}s linear infinite`;
             }
         });
     }
