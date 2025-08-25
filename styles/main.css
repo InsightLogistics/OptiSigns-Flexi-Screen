@@ -146,9 +146,10 @@ header h1 {
 }
 
 .shipment-type {
-    font-size: 1.4rem; /* SCALABLE: Use rem, Reduced from 1.6rem */
+    font-size: 1.0rem;
     font-weight: bold;
-    color: #FC861E;
+    color: #495057;
+    margin-left: auto; /* 오른쪽 정렬 */
 }
 
 .shipment-dates {
