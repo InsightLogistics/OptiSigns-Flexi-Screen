@@ -157,11 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Modified innerHTML for new layout and styling
                     item.innerHTML = `
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="shipment-header">
                             <b class="shipment-customer">${shipment.customer || ''}</b>
-                            <span style="color: #FC861E; font-weight: bold; font-size: 0.9rem;">${containerNumber}</span>
+                            <span class="container-number">${containerNumber}</span>
                         </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="shipment-reference-row">
                             <div class="shipment-reference">${shipment.reference || ''}</div>
                             ${shipment.type && shipment.type !== 'N/A' ? 
                                 `<span class="shipment-type">${shipment.type}</span>` : 
