@@ -135,8 +135,20 @@ header h1 {
     justify-content: space-between; /* Adjusted for better content alignment */
 }
 
+.shipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .shipment-customer {
     font-size: 1.2rem; /* SCALABLE: Use rem, Reduced from 1.4rem */
+}
+
+.container-number {
+    color: #FC861E;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .shipment-reference {
@@ -150,6 +162,12 @@ header h1 {
     font-weight: bold;
     color: #495057;
     margin-left: auto; /* 오른쪽 정렬 */
+}
+
+.shipment-reference-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .shipment-dates {
