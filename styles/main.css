@@ -68,6 +68,7 @@ header h1 {
     background-color: #ffffff;
     border-radius: 0.8rem;
     margin: 0 2.5rem 2.5rem 2.5rem; /* Use rem for scalable margin */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
 }
 
 /* --- NEW: Vertical 9-Row Table Styles --- */
@@ -154,4 +155,13 @@ header h1 {
 /* --- Horizontal Scrolling Animation (Now defined in JS) --- */
 .scrolling-content {
     /* Animation properties are set dynamically via JavaScript */
+}
+
+/* --- NEW: Day-specific header colors --- */
+.date-header-cell.is-saturday {
+    color: #0077b6; /* Blue for Saturday */
+}
+
+.date-header-cell.is-sunday {
+    color: #d90429; /* Red for Sunday */
 }
