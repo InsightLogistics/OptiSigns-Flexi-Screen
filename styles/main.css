@@ -60,13 +60,12 @@ header h1 {
 /* --- Main Content Area (#slider-container) --- */
 #slider-container {
     flex-grow: 1;
-    padding: 2rem; /* Padding is now equal on all sides */
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
     background-color: #ffffff; /* White background for the main content box */
     border-radius: 8px;
-    margin: 0 2rem 2rem 2rem; /* Removed top margin to bring it closer to the header */
+    margin: 1rem; /* Removed top margin to bring it closer to the header */
 }
 
 /* --- Calendar Table Styles --- */
