@@ -3,9 +3,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const DATA_URL = 'data/shipments_by_day.json';
 
     /**
+     * Injects the correct CSS keyframes into the document head to ensure a seamless,
+     * non-pausing linear scroll. This overrides any conflicting styles from external CSS.
+     */
+    function injectAnimationKeyframes() {
+        const styleId = 'horizontal-scroll-keyframes';
+        // Prevent injecting the style tag multiple times
+        if (document.getElementById(styleId)) {
+            return;
+        }
+        const style = document.createElement('style');
+        style.id = styleId;
+        // This keyframe definition creates a simple, continuous scroll from start to end.
+        style.innerHTML = `
+            @keyframes horizontal-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(var(--scroll-width));
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    /**
      * Fetches data, processes it, and builds the vertical table.
      */
     async function loadAndDisplayData() {
+        // Inject the correct animation rules as soon as the script runs.
+        injectAnimationKeyframes();
+
         const container = document.getElementById('slider-container');
         if (!container) {
             console.error('Error: Container element with id "slider-container" not found.');
@@ -52,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const groups = [];
-        // Create date headers from yesterday (i=-1) to D+7 (i=7)
         const dateHeaders = [];
         for (let i = -1; i <= 7; i++) {
             const date = new Date(today);
@@ -60,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
             dateHeaders.push(formatDateWithDay(date));
         }
 
-        // Initialize groups with the new title format
         groups.push({ title: `~ ${dateHeaders[0]}`, shipments: [] }); // Overdue (~ Yesterday)
         groups.push({ title: dateHeaders[1], shipments: [] });      // Today
         for (let i = 2; i <= 7; i++) { // D+1 to D+6
@@ -125,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 group.shipments.forEach(shipment => {
                     const item = document.createElement('div');
                     item.className = 'shipment-item';
-                    // Changed Arr to ETA and Dep to ETD
                     item.innerHTML = `
                         <div class="shipment-customer">${shipment.customer || ''}</div>
                         <div class="shipment-reference">${shipment.reference || ''}</div>
@@ -159,20 +185,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const containers = document.querySelectorAll('.shipment-items-container');
         containers.forEach(container => {
             if (container.scrollWidth > container.clientWidth) {
-                // Duplicate items for a seamless loop
                 const originalItems = Array.from(container.children);
                 originalItems.forEach(item => {
                     container.appendChild(item.cloneNode(true));
                 });
 
-                // The distance to scroll is now half of the new total width
                 const scrollDistance = -container.scrollWidth / 2;
-                
-                // The rate of scroll (pixels per second) is constant
-                const scrollRate = 50; // 50 pixels per second, adjust as needed
+                const scrollRate = 50; // pixels per second
                 const duration = Math.abs(scrollDistance) / scrollRate;
 
-                // Set animation properties directly in JS for a non-alternating loop
+                // Set animation properties directly in JS for a non-pausing, non-alternating loop
                 container.style.setProperty('--scroll-width', `${scrollDistance}px`);
                 container.style.animation = `horizontal-scroll ${duration}s linear infinite`;
             }
