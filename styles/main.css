@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Calibri', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #222; /* Dark background to better see the content area */
     color: #222A23;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ html, body {
     max-height: 100vh; /* But, don't be taller than the viewport */
     max-width: 177.78vh; /* And don't be wider than 16:9 ratio of the viewport height */
     margin: auto; /* This helps with centering */
-    background-color: transparent;
+    background-color: #f8f9fa; /* The gray background for the content area */
 }
 
 /* --- Main Content Container --- */
@@ -41,18 +41,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 1vmin 2rem;
     background-color: transparent;
     flex-shrink: 0;
     box-sizing: border-box;
 }
 
 .dashboard-logo {
-    height: 50px;
+    height: 5vmin; /* SCALABLE: Use vmin for responsive size */
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3vmin; /* SCALABLE: Use vmin for responsive size */
     font-weight: 700;
     color: #222A23;
 }
@@ -92,11 +92,11 @@ header h1 {
 }
 
 .date-header-cell {
-    width: 150px; /* Fixed width for the date headers */
+    width: 16vmin; /* SCALABLE: Use vmin for responsive size */
     background-color: #f1f3f5;
     color: #222A23;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.8vmin; /* SCALABLE: Use vmin for responsive size */
     text-align: center;
     vertical-align: middle;
     border-right: 1px solid #dee2e6;
@@ -120,7 +120,7 @@ header h1 {
 /* Individual shipment item styling */
 .shipment-item {
     flex-shrink: 0; /* Prevent items from shrinking */
-    width: 200px; /* Fixed width for each shipment block */
+    width: 22vmin; /* SCALABLE: Use vmin for responsive size */
     height: 80%;
     border: 1px solid #e9ecef;
     border-radius: 6px;
@@ -134,17 +134,17 @@ header h1 {
 }
 
 .shipment-customer {
-    font-size: 0.9rem;
+    font-size: 1.5vmin; /* SCALABLE: Use vmin for responsive size */
 }
 
 .shipment-reference {
-    font-size: 1.1rem;
+    font-size: 1.7vmin; /* SCALABLE: Use vmin for responsive size */
     font-weight: bold;
     color: #FC861E;
 }
 
 .shipment-dates {
-    font-size: 0.75rem;
+    font-size: 1.2vmin; /* SCALABLE: Use vmin for responsive size */
     color: #495057;
     display: flex;
     justify-content: space-between;
