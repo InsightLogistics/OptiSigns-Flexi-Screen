@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURATION ---
-    const DATA_URL = 'data/shipments_by_day.json';
+    const DATA_URL = 'data/shipments.json'; // Assuming the data is a flat array of shipments now.
 
     /**
-     * Fetches data and initiates the grid table creation.
+     * Fetches data, processes it, and builds the vertical table.
      */
     async function loadAndDisplayData() {
         const container = document.getElementById('slider-container');
         if (!container) {
-            console.error('Error: A container element with id "slider-container" was not found.');
+            console.error('Error: Container element with id "slider-container" not found.');
             return;
         }
 
@@ -17,117 +17,164 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            const dataByDay = await response.json();
-            
+            // The data is expected to be an array of shipment objects.
+            // e.g., [{ customer: "A", arrival: "2023-10-27", ... }, { ... }]
+            const allShipments = await response.json();
+
+            // Hide the initial loading message
             const loadingMessage = document.getElementById('loading-message');
-            if(loadingMessage) {
-                loadingMessage.style.display = 'none';
+            if (loadingMessage) {
+                loadingMessage.parentElement.style.display = 'none';
             }
 
-            // Build the new grid table
-            createAndAnimateGrid(dataByDay);
+            // Process and group the data by the new date categories
+            const groupedData = processAndGroupShipments(allShipments);
+
+            // Build the new vertical table
+            createVerticalTable(groupedData);
 
         } catch (error) {
             console.error('Failed to load shipment data:', error);
-            container.innerHTML = `<div class="flex items-center justify-center h-full"><p class="text-2xl text-red-500">Error loading data. Please check the console.</p></div>`;
+            container.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%;"><p style="font-size: 1.5rem; color: red;">Error loading data. Please check the console.</p></div>`;
         }
     }
 
     /**
-     * Creates a single, static 7-column grid table and initiates scrolling animations.
-     * @param {object} data - The shipment data grouped by day of the week.
+     * Groups all shipments into 9 date-based categories.
+     * @param {Array} allShipments - A flat array of all shipment objects.
+     * @returns {Array} An array of 9 objects, each with a title and a list of shipments.
      */
-    function createAndAnimateGrid(data) {
-        const container = document.getElementById('slider-container');
-        container.innerHTML = ''; // Clear loading message
+    function processAndGroupShipments(allShipments) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Normalize today's date to midnight for accurate comparisons
 
-        const daysOrder = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        
-        let maxRows = 0;
-        daysOrder.forEach(day => {
-            const dayCount = data[day] ? data[day].length : 0;
-            if (dayCount > maxRows) {
-                maxRows = dayCount;
+        // Create 9 "buckets" to hold shipments for each row
+        const groups = [
+            { title: "Overdue", shipments: [] }, // 0: Past
+            { title: "Today", shipments: [] },   // 1: Today
+            { title: "D+1", shipments: [] },     // 2: Tomorrow
+            { title: "D+2", shipments: [] },
+            { title: "D+3", shipments: [] },
+            { title: "D+4", shipments: [] },
+            { title: "D+5", shipments: [] },
+            { title: "D+6", shipments: [] },
+            { title: "Future", shipments: [] }  // 8: D+7 and beyond
+        ];
+
+        allShipments.forEach(shipment => {
+            // Use arrival date, fallback to departure date
+            const dateStr = shipment.arrival || shipment.departure;
+            if (!dateStr) return; // Skip if no date is available
+
+            const shipmentDate = new Date(dateStr);
+            shipmentDate.setHours(0, 0, 0, 0); // Normalize shipment date
+
+            const diffTime = shipmentDate - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 0) {
+                groups[0].shipments.push(shipment); // Overdue
+            } else if (diffDays === 0) {
+                groups[1].shipments.push(shipment); // Today
+            } else if (diffDays >= 1 && diffDays <= 6) {
+                groups[diffDays + 1].shipments.push(shipment); // D+1 to D+6
+            } else if (diffDays >= 7) {
+                groups[8].shipments.push(shipment); // Future
             }
         });
 
-        if (maxRows === 0) {
-            container.innerHTML = `<div class="flex items-center justify-center h-full"><p class="text-2xl text-gray-500">No shipment data available.</p></div>`;
-            return;
+        // Add formatted dates to titles for D+1 to D+6
+        for (let i = 2; i <= 7; i++) {
+             const date = new Date(today);
+             date.setDate(today.getDate() + (i-1));
+             const dateString = `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
+             groups[i].title = `D+${i-1}<br><span style="font-size: 1rem;">(${dateString})</span>`;
         }
 
-        const tableWrapper = document.createElement('div');
-        tableWrapper.className = 'table-wrapper';
-
-        const table = document.createElement('table');
-        table.className = 'data-table';
-
-        table.innerHTML = `
-            <thead>
-                <tr>
-                    <th>Sunday</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                </tr>
-            </thead>
-        `;
-
-        const tbody = document.createElement('tbody');
-        for (let i = 0; i < maxRows; i++) {
-            const tr = document.createElement('tr');
-            let rowHtml = '';
-            daysOrder.forEach(day => {
-                const shipment = data[day] ? data[day][i] : null;
-                if (shipment) {
-                    rowHtml += `
-                        <td class="has-data">
-                            <div class="cell-content">
-                                <div class="shipment-customer">${shipment.customer}</div>
-                                <div class="shipment-reference">${shipment.reference}</div>
-                                <div class="shipment-dates">
-                                    <span class="shipment-arrival">Arrival: ${shipment.arrival}</span>
-                                    <span class="shipment-departure">Departure: ${shipment.departure}</span>
-                                </div>
-                            </div>
-                        </td>`;
-                } else {
-                    rowHtml += '<td></td>';
-                }
-            });
-            tr.innerHTML = rowHtml;
-            tbody.appendChild(tr);
-        }
-        
-        table.appendChild(tbody);
-        tableWrapper.appendChild(table);
-        container.appendChild(tableWrapper);
-        
-        // After the table is in the DOM, start the animations
-        startScrollingAnimations();
+        return groups;
     }
 
     /**
-     * Finds all overflowing cells and applies a dynamic scrolling animation.
+     * Creates the 9-row vertical table and initiates scrolling animations.
+     * @param {Array} groupedData - The processed and grouped shipment data.
      */
-    function startScrollingAnimations() {
-        const cells = document.querySelectorAll('.data-table td.has-data');
-        cells.forEach(cell => {
-            const content = cell.querySelector('.cell-content');
-            // Check if the content's actual height is greater than the cell's visible height
-            if (content.scrollHeight > cell.clientHeight) {
-                const scrollDistance = -(content.scrollHeight - cell.clientHeight);
-                
+    function createVerticalTable(groupedData) {
+        const container = document.getElementById('slider-container');
+        container.innerHTML = ''; // Clear container
+
+        const tableWrapper = document.createElement('div');
+        tableWrapper.className = 'vertical-table-wrapper';
+
+        const table = document.createElement('table');
+        table.className = 'data-table-vertical';
+
+        const tbody = document.createElement('tbody');
+
+        groupedData.forEach(group => {
+            const tr = document.createElement('tr');
+
+            // 1. Create Date Header Cell (<th>)
+            const th = document.createElement('th');
+            th.className = 'date-header-cell';
+            th.innerHTML = group.title;
+            tr.appendChild(th);
+
+            // 2. Create Shipment Data Cell (<td>)
+            const td = document.createElement('td');
+            td.className = 'shipment-data-cell';
+
+            // 3. Create the scrolling container inside the <td>
+            const itemsContainer = document.createElement('div');
+            itemsContainer.className = 'shipment-items-container';
+
+            // 4. Populate with shipment items
+            if (group.shipments.length > 0) {
+                group.shipments.forEach(shipment => {
+                    const item = document.createElement('div');
+                    item.className = 'shipment-item';
+                    item.innerHTML = `
+                        <div class="shipment-customer">${shipment.customer || ''}</div>
+                        <div class="shipment-reference">${shipment.reference || ''}</div>
+                        <div class="shipment-dates">
+                            <span>Arr: ${shipment.arrival || 'N/A'}</span>
+                            <span>Dep: ${shipment.departure || 'N/A'}</span>
+                        </div>
+                    `;
+                    itemsContainer.appendChild(item);
+                });
+            } else {
+                 itemsContainer.innerHTML = `<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>`;
+            }
+
+            td.appendChild(itemsContainer);
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(tbody);
+        tableWrapper.appendChild(table);
+        container.appendChild(tableWrapper);
+
+        // After the table is in the DOM, check for overflows and start animations
+        startHorizontalScrolling();
+    }
+
+    /**
+     * Finds overflowing rows and applies a horizontal scrolling animation.
+     */
+    function startHorizontalScrolling() {
+        const containers = document.querySelectorAll('.shipment-items-container');
+        containers.forEach(container => {
+            // Check if the content's total width is greater than the cell's visible width
+            if (container.scrollWidth > container.clientWidth) {
+                const scrollDistance = -(container.scrollWidth - container.clientWidth);
+
                 // Calculate animation duration based on how much content is hidden.
-                // This makes longer lists scroll for a longer time.
-                const duration = Math.abs(scrollDistance) * 0.1; // Adjust 0.1 to make scroll faster/slower
-                
-                content.style.setProperty('--scroll-height', `${scrollDistance}px`);
-                content.style.animationDuration = `${Math.max(10, duration)}s`; // Minimum 10 seconds duration
-                content.classList.add('scrolling-content');
+                const duration = Math.abs(scrollDistance) * 0.05; // Adjust 0.05 to make scroll faster/slower
+
+                container.style.setProperty('--scroll-width', `${scrollDistance}px`);
+                container.style.animationDuration = `${Math.max(15, duration)}s`; // Minimum 15 seconds duration
+                container.classList.add('scrolling-content');
             }
         });
     }
