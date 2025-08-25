@@ -702,13 +702,6 @@
     ],
     "Friday": [
         {
-            "customer": "OP3",
-            "reference": "FFAU2704716",
-            "arrival": "8/21/2025",
-            "departure": "8/22/2025",
-            "type": "TR"
-        },
-        {
             "customer": "OP2",
             "reference": "KDCU5170241",
             "arrival": "8/13/2025",
