@@ -60,7 +60,7 @@ header h1 {
 /* --- Main Content Area (#slider-container) --- */
 #slider-container {
     flex-grow: 1;
-    padding: 0 2rem 2rem 2rem; /* Padding adjusted */
+    padding: 2rem; /* Padding is now equal on all sides */
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
@@ -120,4 +120,31 @@ header h1 {
 }
 
 /* --- Shipment Info Styling (inside cells) --- */
-.cell-content { padd
+.cell-content { padding: 0.25rem; }
+.shipment-customer { font-size: 0.9rem; }
+.shipment-reference {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FC861E;
+    margin-bottom: 6px;
+    display: block;
+}
+.shipment-dates {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.shipment-arrival, .shipment-departure {
+    font-size: 0.75rem;
+    color: #495057;
+}
+
+/* --- Auto-Scrolling Animation --- */
+@keyframes slow-scroll {
+    0%, 15% { transform: translateY(0); }
+    85%, 100% { transform: translateY(var(--scroll-height)); }
+}
+
+.scrolling-content {
+    animation: slow-scroll linear infinite alternate;
+}
