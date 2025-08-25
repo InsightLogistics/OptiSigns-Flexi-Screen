@@ -145,6 +145,12 @@ header h1 {
     color: #FC861E;
 }
 
+.shipment-type {
+    font-size: 1.4rem; /* SCALABLE: Use rem, Reduced from 1.6rem */
+    font-weight: bold;
+    color: #FC861E;
+}
+
 .shipment-dates {
     font-size: 1.0rem; /* SCALABLE: Use rem, Reduced from 1.1rem */
     color: #495057;
