@@ -17,10 +17,11 @@ html, body {
 /* --- Aspect Ratio Wrapper --- */
 .aspect-ratio-wrapper {
     position: relative;
-    width: 100%; /* Occupy available width */
-    max-width: 100vw;
-    max-height: 100vh;
-    aspect-ratio: 16 / 9; /* This single property maintains the 16:9 ratio */
+    width: 100vw; /* Attempt to fill the viewport width */
+    height: 56.25vw; /* 100 * 9 / 16 = 56.25, enforces 16:9 ratio based on width */
+    max-height: 100vh; /* But, don't be taller than the viewport */
+    max-width: 177.78vh; /* And don't be wider than 16:9 ratio of the viewport height */
+    margin: auto; /* This helps with centering */
     background-color: transparent;
 }
 
