@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Calibri', sans-serif;
-    background-color: #222; /* Dark background for contrast */
+    background-color: #f8f9fa; /* The gray background is now on the body */
     color: #222A23;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ html, body {
     max-height: 100vh;
     max-width: 177.78vh; /* 16 / 9 = 1.7778 */
     margin: auto;
-    background-color: #f8f9fa; /* The gray background is now on the wrapper */
+    background-color: transparent; /* Wrapper is now transparent to show body background */
 }
 
 /* --- Main Content Container --- */
@@ -66,7 +66,7 @@ header h1 {
     position: relative;
     background-color: #ffffff; /* White background for the main content box */
     border-radius: 8px;
-    margin: 0 2rem;
+    margin: 2rem; /* Margin is now equal on all sides */
 }
 
 /* --- Calendar Table Styles --- */
