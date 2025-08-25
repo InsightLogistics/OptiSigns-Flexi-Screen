@@ -19,12 +19,13 @@ def fetch_and_group_by_day():
     OUTPUT_JSON_PATH = "data/shipments_by_day.json"
 
     # --- Column Index Mapping ---
-    # A=0, B=1, C=2, D=3, E=4
+    # A=0, B=1, C=2, D=3, E=4, F=5
     CUSTOMER_COL = 0
     REFERENCE_COL = 1
     ARRIVAL_COL = 2
     DEPARTURE_COL = 3
     DAY_COL = 4
+    TYPE_COL = 5  # F열 추가
     
     # --- Input Validation ---
     if not SPREADSHEET_ID or not GOOGLE_CREDENTIAL_JSON:
@@ -56,7 +57,7 @@ def fetch_and_group_by_day():
         # Start from the second row to skip headers, if any.
         for i, row in enumerate(all_rows[1:]):
             # Ensure the row has enough columns to avoid errors
-            if len(row) <= DAY_COL:
+            if len(row) <= max(DAY_COL, TYPE_COL):  # 가장 큰 컬럼 인덱스까지 확인
                 # print(f"Warning: Skipping row {i+2} due to insufficient columns.")
                 continue
 
@@ -66,6 +67,7 @@ def fetch_and_group_by_day():
             arrival = row[ARRIVAL_COL].strip()
             departure = row[DEPARTURE_COL].strip()
             day = row[DAY_COL].strip().capitalize()
+            type_value = row[TYPE_COL].strip()  # F열 데이터 추출
 
             # Skip if the essential 'day' column is empty
             if not day:
@@ -76,7 +78,8 @@ def fetch_and_group_by_day():
                 "customer": customer or "N/A",
                 "reference": reference or "N/A",
                 "arrival": arrival or "N/A",
-                "departure": departure or "N/A"
+                "departure": departure or "N/A",
+                "type": type_value or "N/A"  # type 필드 추가
             }
             
             # Group the record by the day of the week
