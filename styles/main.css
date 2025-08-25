@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Calibri', sans-serif;
-    background-color: #f8f9fa; /* The gray background is now on the body */
+    background-color: #f8f9fa;
     color: #222A23;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ html, body {
     max-height: 100vh;
     max-width: 177.78vh; /* 16 / 9 = 1.7778 */
     margin: auto;
-    background-color: transparent; /* Wrapper is now transparent to show body background */
+    background-color: transparent;
 }
 
 /* --- Main Content Container --- */
@@ -41,18 +41,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem; /* Reduced top/bottom padding to lower the height */
+    padding: 0.5rem 2rem;
     background-color: transparent;
     flex-shrink: 0;
     box-sizing: border-box;
 }
 
 .dashboard-logo {
-    height: 50px; /* Adjusted for better visibility */
+    height: 50px;
 }
 
 header h1 {
-    font-size: 2rem; /* Adjusted for better visibility */
+    font-size: 2rem;
     font-weight: 700;
     color: #222A23;
 }
@@ -60,91 +60,116 @@ header h1 {
 /* --- Main Content Area (#slider-container) --- */
 #slider-container {
     flex-grow: 1;
-    padding: 0; /* Padding removed to make the table fill the container */
+    padding: 0;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    background-color: #ffffff; /* White background for the main content box */
+    background-color: #ffffff;
     border-radius: 8px;
-    margin: 0 2rem 2rem 2rem; /* Removed top margin to bring it closer to the header */
+    margin: 0 2rem 2rem 2rem;
 }
 
-/* --- Calendar Table Styles --- */
-.table-wrapper {
+/* --- NEW: Vertical 9-Row Table Styles --- */
+.vertical-table-wrapper {
     height: 100%;
+    width: 100%;
     overflow: hidden;
-    display: flex;
 }
 
-.data-table {
+.data-table-vertical {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
+    height: 100%;
+    border-collapse: collapse;
     table-layout: fixed;
 }
 
-.data-table th, .data-table td {
+.data-table-vertical tr {
     border-bottom: 1px solid #dee2e6;
-    border-right: 1px solid #dee2e6;
-    padding: 0.5rem;
-    vertical-align: top;
-    position: relative;
 }
 
-.data-table th:last-child, .data-table td:last-child {
-    border-right: none;
-}
-
-.data-table tbody tr:last-child td {
+.data-table-vertical tr:last-child {
     border-bottom: none;
 }
 
-/* Header Styling */
-.data-table thead th {
+.date-header-cell {
+    width: 150px; /* Fixed width for the date headers */
     background-color: #f1f3f5;
     color: #222A23;
-    font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
-    padding: 0.5rem;
+    font-size: 1.2rem;
     text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid #dee2e6;
+    padding: 0.5rem;
 }
 
-.data-table thead th:first-child { color: #d90429; }
-.data-table thead th:last-child { color: #0077b6; }
-
-/* Cell Styling */
-.data-table td {
-    height: 100px;
-    overflow: hidden;
+.shipment-data-cell {
+    padding: 0;
+    overflow: hidden; /* This is crucial for the horizontal scroll effect */
 }
 
-/* --- Shipment Info Styling (inside cells) --- */
-.cell-content { padding: 0.25rem; }
-.shipment-customer { font-size: 0.9rem; }
+/* Container for the horizontally-scrolling items */
+.shipment-items-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap; /* Ensures all items stay in a single line */
+    align-items: center;
+    padding: 0 1rem; /* Some padding for the items inside */
+}
+
+/* Individual shipment item styling */
+.shipment-item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    width: 200px; /* Fixed width for each shipment block */
+    height: 80%;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.shipment-customer {
+    font-size: 0.9rem;
+}
+
 .shipment-reference {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #FC861E;
-    margin-bottom: 6px;
-    display: block;
-}
-.shipment-dates {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.shipment-arrival, .shipment-departure {
-    font-size: 0.75rem;
-    color: #495057;
 }
 
-/* --- Auto-Scrolling Animation --- */
-@keyframes slow-scroll {
-    0%, 15% { transform: translateY(0); }
-    85%, 100% { transform: translateY(var(--scroll-height)); }
+.shipment-dates {
+    font-size: 0.75rem;
+    color: #495057;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- NEW: Horizontal Scrolling Animation --- */
+@keyframes horizontal-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(0); /* Pause at the start */
+    }
+    85% {
+        transform: translateX(var(--scroll-width)); /* Scroll left */
+    }
+    100% {
+        transform: translateX(var(--scroll-width)); /* Pause at the end */
+    }
 }
 
 .scrolling-content {
-    animation: slow-scroll linear infinite alternate;
+    /* Animation duration is calculated in JS */
+    animation-name: horizontal-scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
