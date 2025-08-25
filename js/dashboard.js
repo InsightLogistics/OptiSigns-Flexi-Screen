@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <div class="shipment-reference">${shipment.reference || ''}</div>
                             ${shipment.type && shipment.type !== 'N/A' ? 
-                                `<span style="font-size: 1.0rem; font-weight: bold; color: #495057;">${shipment.type}</span>` : 
+                                `<span class="shipment-type">${shipment.type}</span>` : 
                                 ''}
                         </div>
                         <div class="shipment-dates">
