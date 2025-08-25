@@ -159,18 +159,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     const item = document.createElement('div');
                     item.className = 'shipment-item';
                     
-                    // 기존 구조에 type 추가
+                    // reference와 type을 같은 행에 표시
                     item.innerHTML = `
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <b class="shipment-customer">${shipment.customer || ''}</b>
                             <div style="display: flex; align-items: center; gap: 8px;">
                                 <span style="color: #FC861E; font-weight: bold; font-size: 0.9rem;">${containerNumber}</span>
-                                ${shipment.type && shipment.type !== 'N/A' ? 
-                                    `<span style="font-size: 1.0rem; font-weight: bold; color: #495057; margin-left: auto;">${shipment.type}</span>` : 
-                                    ''}
                             </div>
                         </div>
-                        <div class="shipment-reference">${shipment.reference || ''}</div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="shipment-reference">${shipment.reference || ''}</div>
+                            ${shipment.type && shipment.type !== 'N/A' ? 
+                                `<span style="font-size: 1.0rem; font-weight: bold; color: #495057;">${shipment.type}</span>` : 
+                                ''}
+                        </div>
                         <div class="shipment-dates">
                             <span>ETA: ${shipment.arrival || 'N/A'}</span>
                             <span>ETD: ${shipment.departure || 'N/A'}</span>
