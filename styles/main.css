@@ -166,7 +166,7 @@ header h1 {
 
 .shipment-reference-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* 왼쪽 정렬로 변경 */
     align-items: flex-start; /* 상단 정렬 */
 }
 
