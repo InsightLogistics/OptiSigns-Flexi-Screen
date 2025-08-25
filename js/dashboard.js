@@ -126,46 +126,40 @@ document.addEventListener('DOMContentLoaded', () => {
     function createVerticalTable(groupedData) {
         const container = document.getElementById('slider-container');
         container.innerHTML = '';
-    
+
         const tableWrapper = document.createElement('div');
         tableWrapper.className = 'vertical-table-wrapper';
-    
+
         const table = document.createElement('table');
         table.className = 'data-table-vertical';
-    
+
         const tbody = document.createElement('tbody');
-    
+
         groupedData.forEach(group => {
             const tr = document.createElement('tr');
-            
-            // 날짜 헤더 셀
             const th = document.createElement('th');
             th.className = 'date-header-cell';
-            th.textContent = group.title;
+            th.innerHTML = group.title;
             tr.appendChild(th);
-    
-            // 데이터 셀
+
             const td = document.createElement('td');
             td.className = 'shipment-data-cell';
-    
+
             const itemsContainer = document.createElement('div');
             itemsContainer.className = 'shipment-items-container';
-    
+
             if (group.shipments.length > 0) {
+                // Add index to get the container number for each day
                 group.shipments.forEach((shipment, index) => {
-                    const containerNumber = index + 1;
-                    
-                    // shipment-item 생성
                     const item = document.createElement('div');
                     item.className = 'shipment-item';
-                    
-                    // reference와 type을 같은 행에 표시
+                    const containerNumber = index + 1;
+
+                    // Modified innerHTML for new layout and styling
                     item.innerHTML = `
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <b class="shipment-customer">${shipment.customer || ''}</b>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <span style="color: #FC861E; font-weight: bold; font-size: 0.9rem;">${containerNumber}</span>
-                            </div>
+                            <span style="color: #FC861E; font-weight: bold; font-size: 0.9rem;">${containerNumber}</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <div class="shipment-reference">${shipment.reference || ''}</div>
@@ -178,24 +172,24 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span>ETD: ${shipment.departure || 'N/A'}</span>
                         </div>
                     `;
-                    
                     itemsContainer.appendChild(item);
                 });
             } else {
-                itemsContainer.innerHTML = '<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>';
+                itemsContainer.innerHTML = `<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>`;
             }
-    
+
             td.appendChild(itemsContainer);
             tr.appendChild(td);
             tbody.appendChild(tr);
         });
-    
+
         table.appendChild(tbody);
         tableWrapper.appendChild(table);
         container.appendChild(tableWrapper);
-    
+
         startHorizontalScrolling();
     }
+
     /**
      * Finds overflowing rows, duplicates content for a seamless loop, and applies animation.
      */
