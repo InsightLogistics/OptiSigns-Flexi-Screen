@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURATION ---
-    const DATA_URL = 'data/shipments.json'; // Assuming the data is a flat array of shipments now.
+    // Reverted to the original DATA_URL as requested.
+    const DATA_URL = 'data/shipments_by_day.json';
 
     /**
      * Fetches data, processes it, and builds the vertical table.
@@ -17,15 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            // The data is expected to be an array of shipment objects.
-            // e.g., [{ customer: "A", arrival: "2023-10-27", ... }, { ... }]
-            const allShipments = await response.json();
+            // The data is expected to be an object with days as keys.
+            // e.g., { "Sunday": [...], "Monday": [...], ... }
+            const dataByDay = await response.json();
 
             // Hide the initial loading message
             const loadingMessage = document.getElementById('loading-message');
             if (loadingMessage) {
                 loadingMessage.parentElement.style.display = 'none';
             }
+
+            // **MODIFICATION**: Convert the object of arrays into a single flat array.
+            // This makes the original data structure compatible with the new processing logic.
+            const allShipments = Object.values(dataByDay).flat();
 
             // Process and group the data by the new date categories
             const groupedData = processAndGroupShipments(allShipments);
@@ -86,10 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add formatted dates to titles for D+1 to D+6
         for (let i = 2; i <= 7; i++) {
              const date = new Date(today);
-             date.setDate(today.getDate() + (i-1));
+             date.setDate(today.getDate() + (i - 1));
              const dateString = `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
-             groups[i].title = `D+${i-1}<br><span style="font-size: 1rem;">(${dateString})</span>`;
+             groups[i].title = `D+${i - 1}<br><span style="font-size: 1rem;">(${dateString})</span>`;
         }
+        
+        const todayDate = new Date(today);
+        const todayDateString = `${(todayDate.getMonth() + 1).toString().padStart(2, '0')}/${todayDate.getDate().toString().padStart(2, '0')}`;
+        groups[1].title = `Today<br><span style="font-size: 1rem;">(${todayDateString})</span>`;
+
 
         return groups;
     }
