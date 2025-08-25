@@ -125,68 +125,75 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function createVerticalTable(groupedData) {
         const container = document.getElementById('slider-container');
-        if (!container) return;
+        container.innerHTML = '';
     
-        // 기존의 테이블 구조를 유지하면서 데이터만 채웁니다
-        const rows = container.querySelectorAll('tr');
-        
-        groupedData.forEach((group, index) => {
-            if (index >= rows.length) return;
+        const tableWrapper = document.createElement('div');
+        tableWrapper.className = 'vertical-table-wrapper';
+    
+        const table = document.createElement('table');
+        table.className = 'data-table-vertical';
+    
+        const tbody = document.createElement('tbody');
+    
+        groupedData.forEach(group => {
+            const tr = document.createElement('tr');
             
-            const row = rows[index];
-            const dateHeader = row.querySelector('.date-header-cell');
-            const itemsContainer = row.querySelector('.shipment-items-container');
-            
-            if (dateHeader) {
-                dateHeader.textContent = group.title;
+            // 날짜 헤더 셀
+            const th = document.createElement('th');
+            th.className = 'date-header-cell';
+            th.textContent = group.title;
+            tr.appendChild(th);
+    
+            // 데이터 셀
+            const td = document.createElement('td');
+            td.className = 'shipment-data-cell';
+    
+            const itemsContainer = document.createElement('div');
+            itemsContainer.className = 'shipment-items-container';
+    
+            if (group.shipments.length > 0) {
+                group.shipments.forEach((shipment, index) => {
+                    const containerNumber = index + 1;
+                    
+                    // shipment-item 생성
+                    const item = document.createElement('div');
+                    item.className = 'shipment-item';
+                    
+                    // 기존 구조에 type 추가
+                    item.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <b class="shipment-customer">${shipment.customer || ''}</b>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #FC861E; font-weight: bold; font-size: 0.9rem;">${containerNumber}</span>
+                                ${shipment.type && shipment.type !== 'N/A' ? 
+                                    `<span style="font-size: 1.0rem; font-weight: bold; color: #495057; margin-left: auto;">${shipment.type}</span>` : 
+                                    ''}
+                            </div>
+                        </div>
+                        <div class="shipment-reference">${shipment.reference || ''}</div>
+                        <div class="shipment-dates">
+                            <span>ETA: ${shipment.arrival || 'N/A'}</span>
+                            <span>ETD: ${shipment.departure || 'N/A'}</span>
+                        </div>
+                    `;
+                    
+                    itemsContainer.appendChild(item);
+                });
+            } else {
+                itemsContainer.innerHTML = '<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>';
             }
-            
-            if (itemsContainer) {
-                itemsContainer.innerHTML = ''; // 기존 내용 초기화
-                
-                if (group.shipments.length > 0) {
-                    group.shipments.forEach((shipment, shipmentIndex) => {
-                        const containerNumber = shipmentIndex + 1;
-                        
-                        // 기존 HTML 구조를 사용하여 아이템 생성
-                        const item = document.createElement('div');
-                        item.className = 'shipment-item';
-                        
-                        // customer, reference, dates는 기존대로
-                        const customerElem = item.querySelector('.shipment-customer');
-                        const referenceElem = item.querySelector('.shipment-reference');
-                        const arrivalElem = item.querySelector('.shipment-arrival');
-                        const departureElem = item.querySelector('.shipment-departure');
-                        const containerNumberElem = item.querySelector('.container-number');
-                        const typeElem = item.querySelector('.shipment-type');
-                        
-                        if (customerElem) customerElem.textContent = shipment.customer || '';
-                        if (referenceElem) referenceElem.textContent = shipment.reference || '';
-                        if (arrivalElem) arrivalElem.textContent = shipment.arrival || 'N/A';
-                        if (departureElem) departureElem.textContent = shipment.departure || 'N/A';
-                        if (containerNumberElem) containerNumberElem.textContent = containerNumber;
-                        
-                        // type 데이터 추가
-                        if (typeElem) {
-                            if (shipment.type && shipment.type !== 'N/A') {
-                                typeElem.textContent = shipment.type;
-                                typeElem.style.display = 'inline'; // 보이게 설정
-                            } else {
-                                typeElem.style.display = 'none'; // 안 보이게 설정
-                            }
-                        }
-                        
-                        itemsContainer.appendChild(item);
-                    });
-                } else {
-                    itemsContainer.innerHTML = '<span style="color: #adb5bd; padding-left: 1rem;">No shipments</span>';
-                }
-            }
+    
+            td.appendChild(itemsContainer);
+            tr.appendChild(td);
+            tbody.appendChild(tr);
         });
+    
+        table.appendChild(tbody);
+        tableWrapper.appendChild(table);
+        container.appendChild(tableWrapper);
     
         startHorizontalScrolling();
     }
-
     /**
      * Finds overflowing rows, duplicates content for a seamless loop, and applies animation.
      */
