@@ -2,27 +2,28 @@
 
 /* --- General Body and Layout --- */
 html, body {
-    height: 100vh; /* Use viewport height to fill the screen */
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Calibri', sans-serif;
-    background-color: #222; /* Dark background to better see the content area */
+    background-color: #222; /* Dark background for contrast */
     color: #222A23;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    /* Set a base font size that scales with the viewport width. All 'rem' units will be based on this. */
+    font-size: 1vw; 
 }
 
 /* --- Aspect Ratio Wrapper --- */
 .aspect-ratio-wrapper {
     position: relative;
-    width: 100vw; /* Attempt to fill the viewport width */
-    height: 56.25vw; /* 100 * 9 / 16 = 56.25, enforces 16:9 ratio based on width */
-    max-height: 100vh; /* But, don't be taller than the viewport */
-    max-width: 177.78vh; /* And don't be wider than 16:9 ratio of the viewport height */
-    margin: auto; /* This helps with centering */
-    background-color: #f8f9fa; /* The gray background for the content area */
+    width: 98%; /* Use percentage for better compatibility */
+    max-width: 177vh; /* 16/9 aspect ratio based on height */
+    margin: auto;
+    aspect-ratio: 16 / 9; /* The most reliable way to maintain aspect ratio */
+    background-color: #f8f9fa;
 }
 
 /* --- Main Content Container --- */
@@ -41,18 +42,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vmin 2rem;
+    padding: 1.5rem 2.5rem; /* Use rem for scalable padding */
     background-color: transparent;
     flex-shrink: 0;
     box-sizing: border-box;
 }
 
 .dashboard-logo {
-    height: 5vmin; /* SCALABLE: Use vmin for responsive size */
+    height: 4rem; /* SCALABLE: Use rem */
 }
 
 header h1 {
-    font-size: 3vmin; /* SCALABLE: Use vmin for responsive size */
+    font-size: 2.5rem; /* SCALABLE: Use rem */
     font-weight: 700;
     color: #222A23;
 }
@@ -65,8 +66,8 @@ header h1 {
     overflow: hidden;
     position: relative;
     background-color: #ffffff;
-    border-radius: 8px;
-    margin: 0 2rem 2rem 2rem;
+    border-radius: 0.8rem;
+    margin: 0 2.5rem 2.5rem 2.5rem; /* Use rem for scalable margin */
 }
 
 /* --- NEW: Vertical 9-Row Table Styles --- */
@@ -92,11 +93,11 @@ header h1 {
 }
 
 .date-header-cell {
-    width: 16vmin; /* SCALABLE: Use vmin for responsive size */
+    width: 15rem; /* SCALABLE: Use rem */
     background-color: #f1f3f5;
     color: #222A23;
     font-weight: 600;
-    font-size: 1.8vmin; /* SCALABLE: Use vmin for responsive size */
+    font-size: 1.5rem; /* SCALABLE: Use rem */
     text-align: center;
     vertical-align: middle;
     border-right: 1px solid #dee2e6;
@@ -105,28 +106,28 @@ header h1 {
 
 .shipment-data-cell {
     padding: 0;
-    overflow: hidden; /* This is crucial for the horizontal scroll effect */
+    overflow: hidden;
 }
 
 /* Container for the horizontally-scrolling items */
 .shipment-items-container {
     height: 100%;
     display: flex;
-    flex-wrap: nowrap; /* Ensures all items stay in a single line */
+    flex-wrap: nowrap;
     align-items: center;
-    padding: 0 1rem; /* Some padding for the items inside */
+    padding: 0 1rem;
 }
 
 /* Individual shipment item styling */
 .shipment-item {
-    flex-shrink: 0; /* Prevent items from shrinking */
-    width: 22vmin; /* SCALABLE: Use vmin for responsive size */
+    flex-shrink: 0;
+    width: 20rem; /* SCALABLE: Use rem */
     height: 80%;
     border: 1px solid #e9ecef;
-    border-radius: 6px;
+    border-radius: 0.6rem;
     background-color: #f8f9fa;
     margin-right: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -134,25 +135,23 @@ header h1 {
 }
 
 .shipment-customer {
-    font-size: 1.5vmin; /* SCALABLE: Use vmin for responsive size */
+    font-size: 1.4rem; /* SCALABLE: Use rem */
 }
 
 .shipment-reference {
-    font-size: 1.7vmin; /* SCALABLE: Use vmin for responsive size */
+    font-size: 1.6rem; /* SCALABLE: Use rem */
     font-weight: bold;
     color: #FC861E;
 }
 
 .shipment-dates {
-    font-size: 1.2vmin; /* SCALABLE: Use vmin for responsive size */
+    font-size: 1.1rem; /* SCALABLE: Use rem */
     color: #495057;
     display: flex;
     justify-content: space-between;
 }
 
 /* --- Horizontal Scrolling Animation (Now defined in JS) --- */
-/* The keyframes and animation properties are now injected by dashboard.js */
-/* This section can be removed if you are sure the JS is always loaded */
 .scrolling-content {
     /* Animation properties are set dynamically via JavaScript */
 }
