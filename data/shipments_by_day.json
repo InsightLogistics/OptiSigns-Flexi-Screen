@@ -372,13 +372,6 @@
             "type": "TR"
         },
         {
-            "customer": "KAI MEDIA",
-            "reference": "1Z654A520325480018",
-            "arrival": "8/25/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP2",
             "reference": "BEAU6274583",
             "arrival": "9/1/2025",
@@ -615,22 +608,106 @@
             "arrival": "8/25/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "KAI MEDIA",
-            "reference": "994-31605630",
-            "arrival": "8/25/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Tuesday": [
+        {
+            "customer": "OP3",
+            "reference": "SMCU2021699",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "BEAU6279380",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "CAIU7883486",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "CAIU9919171",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU1057871",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU1138700",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU1161989",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU1251911",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU7021222",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "AXIU1629205",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU1029822",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "SMCU1196120",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
         {
             "customer": "KAI MEDIA",
             "reference": "YMLU3454994",
             "arrival": "8/26/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "8/26/2025",
+            "type": "OUT"
         }
     ],
     "Wednesday": [
@@ -654,6 +731,13 @@
             "arrival": "-",
             "departure": "8/27/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "STITCHCO",
+            "reference": "MRKU2218398",
+            "arrival": "8/27/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Thursday": [
@@ -665,22 +749,7 @@
             "type": "OUT"
         }
     ],
-    "Friday": [
-        {
-            "customer": "OP2",
-            "reference": "KDCU5170241",
-            "arrival": "8/13/2025",
-            "departure": "8/22/2025",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1070868",
-            "arrival": "8/19/2025",
-            "departure": "8/22/2025",
-            "type": "TR"
-        }
-    ],
+    "Friday": [],
     "Saturday": [],
     "Sunday": [
         {
@@ -693,90 +762,6 @@
         {
             "customer": "OP3",
             "reference": "TCLU6517088",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU2021699",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "BEAU6279380",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "CAIU7883486",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "CAIU9919171",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU1057871",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU1138700",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU1161989",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU1251911",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU7021222",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "AXIU1629205",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU1029822",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "SMCU1196120",
             "arrival": "8/24/2025",
             "departure": "TBD",
             "type": "TR"
