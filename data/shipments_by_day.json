@@ -366,13 +366,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "DRYU9652851",
-            "arrival": "8/25/2025",
-            "departure": "8/25/2025",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "BEAU6274583",
             "arrival": "9/1/2025",
             "departure": "TBD",
@@ -612,6 +605,13 @@
     ],
     "Tuesday": [
         {
+            "customer": "OP2",
+            "reference": "DRYU9652851",
+            "arrival": "8/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
             "customer": "OP3",
             "reference": "SMCU2021699",
             "arrival": "8/26/2025",
@@ -704,10 +704,24 @@
         },
         {
             "customer": "TFA",
+            "reference": "XYLU8180862",
+            "arrival": "8/26/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "8/26/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "OOCU6409790",
+            "arrival": "8/26/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Wednesday": [
@@ -717,6 +731,13 @@
             "arrival": "-",
             "departure": "8/27/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "OP3",
+            "reference": "BEAU5422536",
+            "arrival": "8/27/2025",
+            "departure": "TBD",
+            "type": "TR"
         },
         {
             "customer": "OP3",
@@ -742,29 +763,21 @@
     ],
     "Thursday": [
         {
-            "customer": "FREESIZE",
+            "customer": "OP3",
+            "reference": "TCLU6517088",
+            "arrival": "8/28/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
-            "departure": "8/21/2025",
+            "departure": "8/28/2025",
             "type": "OUT"
         }
     ],
     "Friday": [],
     "Saturday": [],
-    "Sunday": [
-        {
-            "customer": "OP3",
-            "reference": "BEAU5422536",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "TCLU6517088",
-            "arrival": "8/24/2025",
-            "departure": "TBD",
-            "type": "TR"
-        }
-    ]
+    "Sunday": []
 }
