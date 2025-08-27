@@ -508,16 +508,9 @@
         },
         {
             "customer": "TFA",
-            "reference": "XYLU8180862",
-            "arrival": "8/26/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
-            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
-            "departure": "8/26/2025",
+            "departure": "9/2/2025",
             "type": "OUT"
         }
     ],
