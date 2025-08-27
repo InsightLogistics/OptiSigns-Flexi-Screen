@@ -391,13 +391,6 @@
             "arrival": "9/1/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "OP4",
-            "reference": "EGSU2125019",
-            "arrival": "8/25/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Tuesday": [
@@ -682,13 +675,6 @@
             "arrival": "8/27/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "8/27/2025",
-            "type": "OUT"
         },
         {
             "customer": "STITCHCO",
