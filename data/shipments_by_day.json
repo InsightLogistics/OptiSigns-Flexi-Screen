@@ -728,6 +728,20 @@
             "arrival": "-",
             "departure": "8/29/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/5/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/5/2025",
+            "type": "OUT"
         }
     ],
     "Saturday": [],
