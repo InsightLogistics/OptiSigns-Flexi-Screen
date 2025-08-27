@@ -500,13 +500,6 @@
             "type": "TR"
         },
         {
-            "customer": "KAI MEDIA",
-            "reference": "YMLU3454994",
-            "arrival": "8/26/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
@@ -657,21 +650,14 @@
         },
         {
             "customer": "OP3",
-            "reference": "BEAU5422536",
-            "arrival": "8/27/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
             "reference": "WHSU6561094",
             "arrival": "8/27/2025",
             "departure": "TBD",
             "type": "TR"
         },
         {
-            "customer": "STITCHCO",
-            "reference": "MRKU2218398",
+            "customer": "KAI MEDIA",
+            "reference": "YMLU3454994",
             "arrival": "8/27/2025",
             "departure": "-",
             "type": "IN"
@@ -701,10 +687,24 @@
         },
         {
             "customer": "OP3",
+            "reference": "BEAU5422536",
+            "arrival": "8/28/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
             "reference": "TCLU6517088",
             "arrival": "8/28/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "STITCHCO",
+            "reference": "MRKU2218398",
+            "arrival": "8/28/2025",
+            "departure": "-",
+            "type": "IN"
         },
         {
             "customer": "TFA",
@@ -712,6 +712,13 @@
             "arrival": "-",
             "departure": "8/28/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "8/28/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Friday": [
