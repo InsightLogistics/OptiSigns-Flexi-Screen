@@ -654,13 +654,6 @@
             "arrival": "8/27/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "8/27/2025",
-            "type": "OUT"
         }
     ],
     "Thursday": [
@@ -707,6 +700,13 @@
             "type": "OUT"
         },
         {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "8/28/2025",
+            "type": "OUT"
+        },
+        {
             "customer": "KAI MEDIA",
             "reference": "N/A",
             "arrival": "8/28/2025",
@@ -741,6 +741,13 @@
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/5/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "8/29/2025",
             "type": "OUT"
         }
     ],
