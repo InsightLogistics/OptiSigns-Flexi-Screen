@@ -642,13 +642,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "8/27/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP3",
             "reference": "WHSU6561094",
             "arrival": "8/27/2025",
@@ -716,6 +709,13 @@
         {
             "customer": "KAI MEDIA",
             "reference": "N/A",
+            "arrival": "8/28/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "CSNU1420163",
             "arrival": "8/28/2025",
             "departure": "-",
             "type": "IN"
