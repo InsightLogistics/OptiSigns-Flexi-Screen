@@ -649,13 +649,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP3",
-            "reference": "WHSU6561094",
-            "arrival": "8/27/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "KAI MEDIA",
             "reference": "YMLU3454994",
             "arrival": "8/27/2025",
@@ -785,6 +778,13 @@
         }
     ],
     "Friday": [
+        {
+            "customer": "OP3",
+            "reference": "WHSU6561094",
+            "arrival": "8/29/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
         {
             "customer": "TFA",
             "reference": "N/A",
