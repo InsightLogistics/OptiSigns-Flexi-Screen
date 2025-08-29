@@ -679,13 +679,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP3",
-            "reference": "BEAU5422536",
-            "arrival": "8/28/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "STITCHCO",
             "reference": "MRKU2218398",
             "arrival": "8/28/2025",
