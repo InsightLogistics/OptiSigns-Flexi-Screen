@@ -417,13 +417,6 @@
         },
         {
             "customer": "OP3",
-            "reference": "SMCU2021699",
-            "arrival": "8/26/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
             "reference": "BEAU6279380",
             "arrival": "8/26/2025",
             "departure": "TBD",
@@ -687,13 +680,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "8/28/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "CSNU1420163",
             "arrival": "8/28/2025",
             "departure": "-",
@@ -777,13 +763,6 @@
             "arrival": "8/29/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "8/29/2025",
-            "type": "OUT"
         },
         {
             "customer": "KAI MEDIA",
