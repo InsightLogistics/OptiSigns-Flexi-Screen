@@ -759,13 +759,6 @@
     "Friday": [
         {
             "customer": "OP3",
-            "reference": "TCLU6517088",
-            "arrival": "8/28/2025",
-            "departure": "8/29/2025",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
             "reference": "WHSU6561094",
             "arrival": "8/29/2025",
             "departure": "TBD",
