@@ -276,18 +276,18 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/2/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP4",
             "reference": "MSKU8644345",
             "arrival": "9/2/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/9/2025",
+            "type": "OUT"
         }
     ],
     "Wednesday": [
@@ -443,7 +443,7 @@
         {
             "customer": "STITCHCO",
             "reference": "MRKU2218398",
-            "arrival": "8/28/2025",
+            "arrival": "9/4/2025",
             "departure": "-",
             "type": "IN"
         },
@@ -516,13 +516,6 @@
             "arrival": "9/4/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "STITCHCO",
-            "reference": "TCNU8124889",
-            "arrival": "8/28/2025",
-            "departure": "-",
-            "type": "IN"
         },
         {
             "customer": "TFA",
@@ -605,5 +598,13 @@
         }
     ],
     "Saturday": [],
-    "Sunday": []
+    "Sunday": [
+        {
+            "customer": "KAI MEDIA",
+            "reference": "1ZB873370410941979",
+            "arrival": "9/7/2025",
+            "departure": "-",
+            "type": "IN"
+        }
+    ]
 }
