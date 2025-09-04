@@ -448,13 +448,6 @@
             "type": "TR"
         },
         {
-            "customer": "STITCHCO",
-            "reference": "MRKU2218398",
-            "arrival": "9/4/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "TFA",
             "reference": "OOCU6409790",
             "arrival": "9/4/2025",
@@ -523,13 +516,6 @@
             "arrival": "9/4/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "139-47589986",
-            "arrival": "9/4/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Friday": [
@@ -602,6 +588,13 @@
             "arrival": "-",
             "departure": "9/5/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "OP4",
+            "reference": "OTH0016423",
+            "arrival": "9/5/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Saturday": [],
