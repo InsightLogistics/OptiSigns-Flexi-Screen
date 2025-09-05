@@ -247,6 +247,13 @@
         },
         {
             "customer": "TFA",
+            "reference": "BMOU4847720",
+            "arrival": "9/8/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/8/2025",
@@ -590,18 +597,18 @@
             "type": "OUT"
         },
         {
-            "customer": "OP4",
-            "reference": "OTH0016423",
-            "arrival": "9/5/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "KAI MEDIA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/5/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "MR02777305",
+            "arrival": "9/5/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Saturday": [],
