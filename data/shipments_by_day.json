@@ -240,13 +240,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "SMCU1259830",
-            "arrival": "9/1/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "SMCU1264164",
             "arrival": "9/1/2025",
             "departure": "TBD",
@@ -516,6 +509,13 @@
             "arrival": "9/4/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/11/2025",
+            "type": "OUT"
         }
     ],
     "Friday": [
@@ -595,6 +595,13 @@
             "arrival": "9/5/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/5/2025",
+            "type": "OUT"
         }
     ],
     "Saturday": [],
