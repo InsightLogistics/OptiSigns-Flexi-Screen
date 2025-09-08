@@ -609,9 +609,24 @@
             "arrival": "9/5/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "CSNU7523180",
+            "arrival": "9/5/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
-    "Saturday": [],
+    "Saturday": [
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "N/A",
+            "departure": "N/A",
+            "type": "TR"
+        }
+    ],
     "Sunday": [
         {
             "customer": "KAI MEDIA",
