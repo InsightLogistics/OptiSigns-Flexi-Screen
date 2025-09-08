@@ -216,13 +216,6 @@
             "arrival": "9/8/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "KAI MEDIA",
-            "reference": "N/A",
-            "arrival": "9/8/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Tuesday": [
@@ -528,13 +521,5 @@
         }
     ],
     "Saturday": [],
-    "Sunday": [
-        {
-            "customer": "KAI MEDIA",
-            "reference": "1ZB873370410941979",
-            "arrival": "9/7/2025",
-            "departure": "-",
-            "type": "IN"
-        }
-    ]
+    "Sunday": []
 }
