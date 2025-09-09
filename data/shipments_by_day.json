@@ -246,6 +246,13 @@
             "arrival": "-",
             "departure": "9/9/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "9/9/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Wednesday": [
@@ -497,13 +504,6 @@
             "arrival": "9/5/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/5/2025",
-            "type": "OUT"
         }
     ],
     "Saturday": [],
