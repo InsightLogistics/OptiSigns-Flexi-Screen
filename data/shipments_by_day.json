@@ -183,13 +183,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "HMMU6542992",
-            "arrival": "9/8/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "SEGU6627548",
             "arrival": "9/8/2025",
@@ -209,6 +202,13 @@
             "arrival": "9/15/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "393025227891",
+            "arrival": "9/15/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Tuesday": [
