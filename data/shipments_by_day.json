@@ -197,20 +197,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "KOCU5108843",
-            "arrival": "9/8/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/8/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "TFA",
             "reference": "SEGU6627548",
             "arrival": "9/8/2025",
@@ -220,6 +206,13 @@
         {
             "customer": "OP2",
             "reference": "TEMU1455102",
+            "arrival": "9/15/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SEKU1485888",
             "arrival": "9/15/2025",
             "departure": "TBD",
             "type": "TR"
@@ -246,6 +239,13 @@
             "arrival": "8/26/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/9/2025",
+            "type": "OUT"
         },
         {
             "customer": "TFA",
@@ -395,6 +395,13 @@
             "arrival": "9/10/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "JADE",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/10/2025",
+            "type": "OUT"
         }
     ],
     "Thursday": [
@@ -514,13 +521,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/5/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "KAI MEDIA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/5/2025",
