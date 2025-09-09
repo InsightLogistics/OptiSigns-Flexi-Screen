@@ -190,13 +190,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "KOCU4327066",
-            "arrival": "9/8/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "SEGU6627548",
             "arrival": "9/8/2025",
@@ -470,20 +463,6 @@
         }
     ],
     "Friday": [
-        {
-            "customer": "KAI MEDIA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/5/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "KAI MEDIA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/5/2025",
-            "type": "OUT"
-        },
         {
             "customer": "OP2",
             "reference": "BEAU6279923",
