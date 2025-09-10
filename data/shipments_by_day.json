@@ -183,13 +183,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "SEGU6627548",
-            "arrival": "9/8/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP2",
             "reference": "TEMU1455102",
             "arrival": "9/15/2025",
@@ -418,13 +411,6 @@
             "arrival": "8/28/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "OP2",
-            "reference": "CAIU7490730",
-            "arrival": "9/4/2025",
-            "departure": "TBD",
-            "type": "TR"
         },
         {
             "customer": "OP2",
