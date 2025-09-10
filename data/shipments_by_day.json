@@ -225,13 +225,6 @@
             "arrival": "8/26/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/9/2025",
-            "type": "OUT"
         }
     ],
     "Wednesday": [
@@ -404,13 +397,6 @@
             "arrival": "8/28/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "OP2",
-            "reference": "HMMU2026750",
-            "arrival": "9/4/2025",
-            "departure": "TBD",
-            "type": "TR"
         },
         {
             "customer": "OP2",
