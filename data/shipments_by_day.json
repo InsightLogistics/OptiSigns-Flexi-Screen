@@ -406,13 +406,6 @@
             "type": "IN"
         },
         {
-            "customer": "OP2",
-            "reference": "KOCU4977689",
-            "arrival": "9/4/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
