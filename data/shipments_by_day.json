@@ -418,13 +418,6 @@
             "arrival": "-",
             "departure": "9/11/2025",
             "type": "OUT"
-        },
-        {
-            "customer": "OP4",
-            "reference": "UETU5529730",
-            "arrival": "9/11/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Friday": [
@@ -464,7 +457,7 @@
             "type": "TR"
         },
         {
-            "customer": "?",
+            "customer": "TFA",
             "reference": "CEOU6039768",
             "arrival": "9/12/2025",
             "departure": "-",
