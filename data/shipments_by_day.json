@@ -197,13 +197,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "621-61699341",
-            "arrival": "9/15/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP4",
             "reference": "EGHU3387154",
             "arrival": "9/15/2025",
@@ -234,18 +227,18 @@
             "type": "TR"
         },
         {
-            "customer": "KAI MEDIA",
-            "reference": "393025227891",
-            "arrival": "9/16/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/16/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "621-61699341",
+            "arrival": "9/16/2025",
+            "departure": "-",
+            "type": "IN"
         },
         {
             "customer": "OP3",
@@ -398,13 +391,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "CSNU7523180",
-            "arrival": "9/10/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
-            "customer": "TFA",
             "reference": "7813759",
             "arrival": "-",
             "departure": "9/17/2025",
@@ -520,6 +506,14 @@
             "type": "OUT"
         }
     ],
-    "Saturday": [],
+    "Saturday": [
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "N/A",
+            "departure": "N/A",
+            "type": "OUT"
+        }
+    ],
     "Sunday": []
 }
