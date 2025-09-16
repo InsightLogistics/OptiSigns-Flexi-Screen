@@ -253,6 +253,13 @@
             "arrival": "9/16/2025",
             "departure": "-",
             "type": "N/A"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/16/2025",
+            "type": "OUT"
         }
     ],
     "Wednesday": [
