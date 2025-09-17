@@ -362,13 +362,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "CSNU7523180",
-            "arrival": "9/10/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP2",
             "reference": "TEMU1455102",
             "arrival": "9/17/2025",
