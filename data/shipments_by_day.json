@@ -370,35 +370,7 @@
         },
         {
             "customer": "TFA",
-            "reference": "7813759",
-            "arrival": "-",
-            "departure": "9/17/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "7813769",
-            "arrival": "-",
-            "departure": "9/17/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "KAI MEDIA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/17/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "TJ7815502",
-            "arrival": "-",
-            "departure": "9/17/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "1918948",
             "arrival": "-",
             "departure": "9/17/2025",
             "type": "OUT"
@@ -494,6 +466,13 @@
         {
             "customer": "TFA",
             "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/19/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "1918948",
             "arrival": "-",
             "departure": "9/19/2025",
             "type": "OUT"
