@@ -181,6 +181,27 @@
             "arrival": "9/15/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/22/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/22/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/22/2025",
+            "type": "OUT"
         }
     ],
     "Tuesday": [
@@ -355,13 +376,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "TEMU1455102",
-            "arrival": "9/17/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "621-61699341",
             "arrival": "9/17/2025",
@@ -410,13 +424,6 @@
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/11/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/18/2025",
             "type": "OUT"
         }
     ],
@@ -472,7 +479,7 @@
         },
         {
             "customer": "TFA",
-            "reference": "1918948",
+            "reference": "1918948\n1919226",
             "arrival": "-",
             "departure": "9/19/2025",
             "type": "OUT"
@@ -497,6 +504,20 @@
             "arrival": "9/26/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "JADE",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/19/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "KAI MEDIA",
+            "reference": "N/A",
+            "arrival": "9/19/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Saturday": [],
