@@ -184,6 +184,20 @@
         },
         {
             "customer": "TFA",
+            "reference": "7813795",
+            "arrival": "-",
+            "departure": "9/22/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/22/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/22/2025",
@@ -199,6 +213,13 @@
         {
             "customer": "TFA",
             "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/22/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "1918948\n1919226\n1919311",
             "arrival": "-",
             "departure": "9/22/2025",
             "type": "OUT"
@@ -227,18 +248,18 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "SEKU1485888",
-            "arrival": "9/16/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "OP3",
             "reference": "K-F25-039",
             "arrival": "9/16/2025",
             "departure": "-",
             "type": "N/A"
+        },
+        {
+            "customer": "TFA",
+            "reference": "139-47589990",
+            "arrival": "9/23/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Wednesday": [
@@ -465,13 +486,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "7813795",
-            "arrival": "-",
-            "departure": "9/19/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/19/2025",
@@ -492,25 +506,11 @@
             "type": "OUT"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/19/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP2",
             "reference": "TCKU7962413",
             "arrival": "9/26/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "JADE",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/19/2025",
-            "type": "OUT"
         },
         {
             "customer": "KAI MEDIA",
