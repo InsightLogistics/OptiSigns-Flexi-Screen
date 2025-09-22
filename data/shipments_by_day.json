@@ -218,20 +218,6 @@
             "type": "OUT"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "1918948\n1919226\n1919311",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP4",
             "reference": "MRKU4317785",
             "arrival": "9/22/2025",
@@ -271,6 +257,13 @@
         {
             "customer": "TFA",
             "reference": "139-47589990",
+            "arrival": "9/23/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "MATU5154956",
             "arrival": "9/23/2025",
             "departure": "-",
             "type": "IN"
@@ -420,6 +413,13 @@
         {
             "customer": "TFA",
             "reference": "WINNERS",
+            "arrival": "-",
+            "departure": "9/24/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
             "arrival": "-",
             "departure": "9/24/2025",
             "type": "OUT"
