@@ -184,27 +184,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "7813795",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "9/22/2025",
@@ -409,6 +388,13 @@
             "arrival": "9/17/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "7813795",
+            "arrival": "-",
+            "departure": "9/24/2025",
+            "type": "OUT"
         },
         {
             "customer": "TFA",
