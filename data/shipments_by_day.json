@@ -183,20 +183,6 @@
             "type": "IN"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/22/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP4",
             "reference": "MRKU4317785",
             "arrival": "9/22/2025",
@@ -236,13 +222,6 @@
         {
             "customer": "TFA",
             "reference": "139-47589990",
-            "arrival": "9/23/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
-            "customer": "TFA",
-            "reference": "MATU5154956",
             "arrival": "9/23/2025",
             "departure": "-",
             "type": "IN"
@@ -391,13 +370,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "7813795",
-            "arrival": "-",
-            "departure": "9/24/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "WINNERS",
             "arrival": "-",
             "departure": "9/24/2025",
@@ -409,6 +381,13 @@
             "arrival": "-",
             "departure": "9/24/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "OP3",
+            "reference": "176-18151280",
+            "arrival": "9/24/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Thursday": [
@@ -495,6 +474,48 @@
             "customer": "OP2",
             "reference": "TCKU7962413",
             "arrival": "9/26/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP4",
+            "reference": "TCLU2392022",
+            "arrival": "9/24/2025",
+            "departure": "9/26/2025",
+            "type": "TR"
+        },
+        {
+            "customer": "OP4",
+            "reference": "OOCU9516581",
+            "arrival": "9/24/2025",
+            "departure": "9/26/2025",
+            "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/26/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/26/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "OP2",
+            "reference": "TCNU4915808",
+            "arrival": "10/3/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "ONEU1180198",
+            "arrival": "10/3/2025",
             "departure": "TBD",
             "type": "TR"
         }
