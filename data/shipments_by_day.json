@@ -181,6 +181,13 @@
             "arrival": "9/15/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/29/2025",
+            "type": "OUT"
         }
     ],
     "Tuesday": [
@@ -399,13 +406,6 @@
             "type": "OUT"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/25/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP4",
             "reference": "OOCU9516581",
             "arrival": "9/24/2025",
@@ -418,6 +418,13 @@
             "arrival": "9/24/2025",
             "departure": "9/25/2025",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "FFAU5091958",
+            "arrival": "9/25/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Friday": [
@@ -525,6 +532,13 @@
             "arrival": "10/3/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "DAILYNCO",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "9/26/2025",
+            "type": "OUT"
         }
     ],
     "Saturday": [],
