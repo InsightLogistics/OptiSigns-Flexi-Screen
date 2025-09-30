@@ -169,13 +169,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "BMOU4847720",
-            "arrival": "9/8/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP4",
             "reference": "EGHU3387154",
             "arrival": "9/15/2025",
@@ -411,20 +404,6 @@
             "arrival": "8/28/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "OOCU6409790",
-            "arrival": "9/4/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
-            "customer": "TFA",
-            "reference": "CSNU1420163",
-            "arrival": "8/28/2025",
-            "departure": "-",
-            "type": "IN"
         },
         {
             "customer": "TFA",
