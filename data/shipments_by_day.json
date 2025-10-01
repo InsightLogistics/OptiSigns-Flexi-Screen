@@ -457,13 +457,6 @@
             "type": "OUT"
         },
         {
-            "customer": "OP2",
-            "reference": "TCKU7962413",
-            "arrival": "9/26/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "OP4",
             "reference": "TCLU2392022",
             "arrival": "9/24/2025",
