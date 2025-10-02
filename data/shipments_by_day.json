@@ -374,13 +374,6 @@
             "arrival": "10/1/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "TCLU3151797",
-            "arrival": "10/1/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Thursday": [
@@ -415,6 +408,13 @@
         {
             "customer": "TFA",
             "reference": "1920410",
+            "arrival": "-",
+            "departure": "10/2/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "JADE",
+            "reference": "N/A",
             "arrival": "-",
             "departure": "10/2/2025",
             "type": "OUT"
@@ -521,6 +521,13 @@
         },
         {
             "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/3/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "QUEUE KOREA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "10/3/2025",
