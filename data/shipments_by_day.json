@@ -181,6 +181,34 @@
             "arrival": "10/6/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/6/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "QUEUE KOREA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/6/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "196534051",
+            "arrival": "-",
+            "departure": "10/6/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "196534063",
+            "arrival": "-",
+            "departure": "10/6/2025",
+            "type": "OUT"
         }
     ],
     "Tuesday": [
@@ -374,6 +402,13 @@
             "arrival": "10/1/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SMCU1140292",
+            "arrival": "10/15/2025",
+            "departure": "TBD",
+            "type": "TR"
         }
     ],
     "Thursday": [
@@ -500,20 +535,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/3/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/3/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "QUEUE KOREA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "10/3/2025",
