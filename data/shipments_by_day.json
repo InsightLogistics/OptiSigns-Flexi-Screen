@@ -181,34 +181,6 @@
             "arrival": "10/6/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/6/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "QUEUE KOREA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/6/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "196534051",
-            "arrival": "-",
-            "departure": "10/6/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "196534063",
-            "arrival": "-",
-            "departure": "10/6/2025",
-            "type": "OUT"
         }
     ],
     "Tuesday": [
@@ -239,6 +211,20 @@
             "arrival": "9/16/2025",
             "departure": "-",
             "type": "N/A"
+        },
+        {
+            "customer": "OP2",
+            "reference": "ONEU1180198",
+            "arrival": "10/7/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "CAAU9513615",
+            "arrival": "10/7/2025",
+            "departure": "TBD",
+            "type": "TR"
         },
         {
             "customer": "TFA",
@@ -409,6 +395,13 @@
             "arrival": "10/15/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "FREESIZE",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/8/2025",
+            "type": "OUT"
         }
     ],
     "Thursday": [
@@ -439,6 +432,13 @@
             "arrival": "10/9/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/9/2025",
+            "type": "OUT"
         }
     ],
     "Friday": [
@@ -499,20 +499,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "ONEU1180198",
-            "arrival": "10/3/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "CAAU9513615",
-            "arrival": "10/3/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "DAILYNCO",
             "reference": "N/A",
             "arrival": "-",
@@ -535,6 +521,13 @@
         },
         {
             "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/3/2025",
+            "type": "OUT"
+        },
+        {
+            "customer": "FREESIZE",
             "reference": "N/A",
             "arrival": "-",
             "departure": "10/3/2025",
