@@ -214,13 +214,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "ONEU1180198",
-            "arrival": "10/7/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "CAAU9513615",
             "arrival": "10/7/2025",
             "departure": "TBD",
@@ -395,6 +388,13 @@
             "arrival": "-",
             "departure": "9/24/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "OP2",
+            "reference": "ONEU1180198",
+            "arrival": "10/8/2025",
+            "departure": "TBD",
+            "type": "TR"
         },
         {
             "customer": "OP1",
