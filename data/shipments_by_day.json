@@ -581,13 +581,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "SMCU1047929",
-            "arrival": "10/5/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "SMCU1063112",
             "arrival": "10/5/2025",
             "departure": "TBD",
@@ -596,13 +589,6 @@
         {
             "customer": "OP2",
             "reference": "SMCU1094330",
-            "arrival": "10/5/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1109430",
             "arrival": "10/5/2025",
             "departure": "TBD",
             "type": "TR"
