@@ -544,6 +544,13 @@
         },
         {
             "customer": "OP2",
+            "reference": "SMCU1140374",
+            "arrival": "N/A",
+            "departure": "N/A",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
             "reference": "TRHU6867810",
             "arrival": "10/11/2025",
             "departure": "TBD",
@@ -589,13 +596,6 @@
         {
             "customer": "OP2",
             "reference": "SMCU1094330",
-            "arrival": "10/5/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1140374",
             "arrival": "10/5/2025",
             "departure": "TBD",
             "type": "TR"
