@@ -390,13 +390,6 @@
             "type": "OUT"
         },
         {
-            "customer": "OP2",
-            "reference": "ONEU1180198",
-            "arrival": "10/8/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "OP1",
             "reference": "SMLMPHX5B4261700",
             "arrival": "10/1/2025",
@@ -555,6 +548,13 @@
             "arrival": "10/11/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "OP2",
+            "reference": "TRHU6867810",
+            "arrival": "10/11/2025",
+            "departure": "TBD",
+            "type": "TR"
         }
     ],
     "Sunday": [
