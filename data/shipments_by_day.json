@@ -485,13 +485,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP4",
-            "reference": "CAAU8567710",
-            "arrival": "10/10/2025",
-            "departure": "10/10/2025",
-            "type": "TR"
-        },
-        {
             "customer": "YOUNG&ROOM",
             "reference": "N/A",
             "arrival": "-",
@@ -523,13 +516,6 @@
         }
     ],
     "Sunday": [
-        {
-            "customer": "OP2",
-            "reference": "CAAU5253968",
-            "arrival": "10/5/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
         {
             "customer": "OP2",
             "reference": "CAAU8724763",
