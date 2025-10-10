@@ -192,13 +192,6 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "CAAU9513615",
-            "arrival": "10/7/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "N/A",
             "arrival": "9/30/2025",
@@ -210,20 +203,6 @@
             "reference": "CAAU9513615",
             "arrival": "10/7/2025",
             "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "JINRO",
-            "reference": "SMCU1161464",
-            "arrival": "10/7/2025",
-            "departure": "10/7/2025",
-            "type": "TR"
-        },
-        {
-            "customer": "JINRO",
-            "reference": "BMOU5452140",
-            "arrival": "10/7/2025",
-            "departure": "10/7/2025",
             "type": "TR"
         }
     ],
@@ -425,13 +404,6 @@
             "arrival": "-",
             "departure": "10/9/2025",
             "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "SELU4358077",
-            "arrival": "10/9/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Friday": [
@@ -525,6 +497,13 @@
             "arrival": "10/10/2025",
             "departure": "10/10/2025",
             "type": "TR"
+        },
+        {
+            "customer": "YOUNG&ROOM",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/10/2025",
+            "type": "OUT"
         }
     ],
     "Saturday": [
