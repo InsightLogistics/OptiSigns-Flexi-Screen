@@ -539,13 +539,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "CAIU7883742",
-            "arrival": "10/5/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "CAIU9917970",
             "arrival": "10/5/2025",
             "departure": "TBD",
