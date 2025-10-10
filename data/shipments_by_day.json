@@ -490,6 +490,13 @@
             "arrival": "-",
             "departure": "10/10/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "OP4",
+            "reference": "TCKU6272590",
+            "arrival": "10/17/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Saturday": [
