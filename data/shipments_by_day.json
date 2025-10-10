@@ -167,13 +167,6 @@
             "arrival": "9/1/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "CAIU4360136",
-            "arrival": "10/6/2025",
-            "departure": "TBD",
-            "type": "TR"
         }
     ],
     "Tuesday": [
