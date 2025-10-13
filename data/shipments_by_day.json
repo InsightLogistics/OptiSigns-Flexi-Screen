@@ -478,13 +478,6 @@
             "type": "OUT"
         },
         {
-            "customer": "OP4",
-            "reference": "CAAU4669462",
-            "arrival": "10/7/2025",
-            "departure": "10/10/2025",
-            "type": "TR"
-        },
-        {
             "customer": "YOUNG&ROOM",
             "reference": "N/A",
             "arrival": "-",
@@ -540,13 +533,6 @@
         {
             "customer": "OP2",
             "reference": "SMCU1063112",
-            "arrival": "10/5/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1094330",
             "arrival": "10/5/2025",
             "departure": "TBD",
             "type": "TR"
