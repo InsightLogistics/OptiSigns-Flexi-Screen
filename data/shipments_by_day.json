@@ -360,13 +360,6 @@
             "arrival": "10/15/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "TRHU6867810",
-            "arrival": "10/15/2025",
-            "departure": "10/15/2025",
-            "type": "TR"
         }
     ],
     "Thursday": [
