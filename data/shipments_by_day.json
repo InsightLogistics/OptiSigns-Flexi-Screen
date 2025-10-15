@@ -407,14 +407,14 @@
         },
         {
             "customer": "TFA",
-            "reference": "N/A",
+            "reference": "C8846025",
             "arrival": "-",
             "departure": "10/16/2025",
             "type": "OUT"
         },
         {
-            "customer": "TFA",
-            "reference": "C8846025",
+            "customer": "JADE",
+            "reference": "N/A",
             "arrival": "-",
             "departure": "10/16/2025",
             "type": "OUT"
@@ -462,6 +462,13 @@
             "arrival": "10/17/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "10/17/2025",
+            "type": "OUT"
         }
     ],
     "Saturday": [],
