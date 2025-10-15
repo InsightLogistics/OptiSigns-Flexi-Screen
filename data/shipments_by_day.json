@@ -388,13 +388,6 @@
             "arrival": "10/15/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/15/2025",
-            "type": "OUT"
         }
     ],
     "Thursday": [
@@ -439,6 +432,13 @@
             "arrival": "-",
             "departure": "10/16/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "TFA",
+            "reference": "C8846025",
+            "arrival": "-",
+            "departure": "10/16/2025",
+            "type": "OUT"
         }
     ],
     "Friday": [
@@ -462,20 +462,6 @@
             "arrival": "9/5/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/12/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "KAI MEDIA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "9/26/2025",
-            "type": "OUT"
         },
         {
             "customer": "TFA",
