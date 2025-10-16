@@ -462,13 +462,6 @@
             "type": "IN"
         },
         {
-            "customer": "TFA",
-            "reference": "C8846025",
-            "arrival": "-",
-            "departure": "10/16/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "JADE",
             "reference": "N/A",
             "arrival": "-",
