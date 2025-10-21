@@ -390,13 +390,6 @@
             "type": "OUT"
         },
         {
-            "customer": "OP2",
-            "reference": "SMCU1140292",
-            "arrival": "10/15/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
