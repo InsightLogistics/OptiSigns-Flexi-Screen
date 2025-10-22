@@ -191,6 +191,13 @@
         },
         {
             "customer": "OP4",
+            "reference": "APHU6742699",
+            "arrival": "10/27/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "OP4",
             "reference": "EITU3073961",
             "arrival": "10/20/2025",
             "departure": "-",
@@ -225,13 +232,6 @@
             "arrival": "10/21/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/21/2025",
-            "type": "OUT"
         },
         {
             "customer": "TFA",
@@ -432,13 +432,6 @@
             "arrival": "10/16/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "OP4",
-            "reference": "APHU6742699",
-            "arrival": "10/23/2025",
-            "departure": "-",
-            "type": "IN"
         },
         {
             "customer": "OP4",
