@@ -411,13 +411,6 @@
             "type": "OUT"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/22/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP3",
             "reference": "CSNU6246434",
             "arrival": "10/29/2025",
