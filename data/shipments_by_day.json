@@ -281,6 +281,13 @@
             "arrival": "10/21/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "K-F25-045",
+            "arrival": "10/28/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Wednesday": [
@@ -527,15 +534,7 @@
             "type": "OUT"
         }
     ],
-    "Saturday": [
-        {
-            "customer": "TFA",
-            "reference": "K-F25-045",
-            "arrival": "N/A",
-            "departure": "N/A",
-            "type": "IN"
-        }
-    ],
+    "Saturday": [],
     "Sunday": [
         {
             "customer": "OP2",
