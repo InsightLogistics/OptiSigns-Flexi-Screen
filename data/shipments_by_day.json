@@ -212,27 +212,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/27/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/27/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "10/27/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "GB251040",
             "arrival": "10/27/2025",
             "departure": "-",
