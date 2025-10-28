@@ -174,13 +174,6 @@
             "arrival": "10/13/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "10/27/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Tuesday": [
@@ -397,13 +390,6 @@
             "arrival": "-",
             "departure": "9/11/2025",
             "type": "OUT"
-        },
-        {
-            "customer": "OP1",
-            "reference": "SMLMPHX5B4261700",
-            "arrival": "10/16/2025",
-            "departure": "TBD",
-            "type": "TR"
         },
         {
             "customer": "TFA",
