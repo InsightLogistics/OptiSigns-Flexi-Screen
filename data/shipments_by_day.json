@@ -415,7 +415,22 @@
             "type": "IN"
         }
     ],
-    "Saturday": [],
+    "Saturday": [
+        {
+            "customer": "OP2",
+            "reference": "CAIU9295286",
+            "arrival": "11/8/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SMCU1193712",
+            "arrival": "11/8/2025",
+            "departure": "TBD",
+            "type": "TR"
+        }
+    ],
     "Sunday": [
         {
             "customer": "OP2",
