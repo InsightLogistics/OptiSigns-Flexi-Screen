@@ -204,13 +204,6 @@
             "arrival": "11/3/2025",
             "departure": "11/4/2025",
             "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "155-06983222",
-            "arrival": "11/4/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Wednesday": [
