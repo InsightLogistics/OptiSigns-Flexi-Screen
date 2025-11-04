@@ -169,13 +169,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "TLLU4699253",
-            "arrival": "10/13/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP2",
             "reference": "CAIU9952272",
             "arrival": "11/3/2025",
@@ -360,13 +353,6 @@
             "arrival": "8/27/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "621-61699341",
-            "arrival": "9/17/2025",
-            "departure": "-",
-            "type": "IN"
         },
         {
             "customer": "TFA",
