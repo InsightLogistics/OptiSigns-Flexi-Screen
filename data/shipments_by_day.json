@@ -348,24 +348,23 @@
             "arrival": "8/28/2025",
             "departure": "TBD",
             "type": "TR"
-        }
-    ],
-    "Friday": [
+        },
         {
             "customer": "TFA",
             "reference": "GAOU6020129",
-            "arrival": "11/7/2025",
+            "arrival": "11/6/2025",
             "departure": "-",
             "type": "IN"
         },
         {
             "customer": "TFA",
             "reference": "N/A",
-            "arrival": "11/7/2025",
-            "departure": "11/7/2025",
+            "arrival": "11/6/2025",
+            "departure": "11/6/2025",
             "type": "IN"
         }
     ],
+    "Friday": [],
     "Saturday": [
         {
             "customer": "OP2",
