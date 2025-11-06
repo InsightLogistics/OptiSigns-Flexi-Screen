@@ -351,13 +351,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "GAOU6020129",
-            "arrival": "11/6/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
-            "customer": "TFA",
             "reference": "N/A",
             "arrival": "11/6/2025",
             "departure": "11/6/2025",
