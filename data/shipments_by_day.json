@@ -332,6 +332,13 @@
             "arrival": "8/27/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "11/12/2025",
+            "type": "OUT"
         }
     ],
     "Thursday": [
@@ -365,6 +372,13 @@
             "arrival": "11/8/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "OP4",
+            "reference": "MRKU4990585",
+            "arrival": "11/15/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Sunday": [
