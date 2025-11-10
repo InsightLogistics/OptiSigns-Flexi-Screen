@@ -192,53 +192,25 @@
             "type": "TR"
         },
         {
-            "customer": "OP2",
-            "reference": "CAIU9295286",
-            "arrival": "11/11/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1193712",
-            "arrival": "11/11/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "CSNU8205943",
-            "arrival": "11/11/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "FFAU2451876",
-            "arrival": "11/11/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "TGBU4923151",
-            "arrival": "11/11/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "TRHU7376382",
-            "arrival": "11/11/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
             "customer": "TFA",
             "reference": "N/A",
             "arrival": "-",
             "departure": "11/11/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "OP3",
+            "reference": "CBHU9180230",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "TCNU1098495",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
         }
     ],
     "Wednesday": [
@@ -372,6 +344,48 @@
             "customer": "OP2",
             "reference": "SMCU1288171",
             "arrival": "8/27/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "CAIU9295286",
+            "arrival": "11/12/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SMCU1193712",
+            "arrival": "11/12/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "CSNU8205943",
+            "arrival": "11/12/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "FFAU2451876",
+            "arrival": "11/12/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "TGBU4923151",
+            "arrival": "11/12/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "TRHU7376382",
+            "arrival": "11/12/2025",
             "departure": "TBD",
             "type": "TR"
         },
