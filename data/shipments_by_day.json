@@ -213,6 +213,13 @@
             "type": "OUT"
         },
         {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "11/11/2025",
+            "type": "OUT"
+        },
+        {
             "customer": "OP3",
             "reference": "CBHU9180230",
             "arrival": "11/18/2025",
@@ -388,13 +395,6 @@
             "arrival": "11/12/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/12/2025",
-            "type": "OUT"
         },
         {
             "customer": "TFA",
