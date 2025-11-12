@@ -369,13 +369,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/12/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP4",
             "reference": "CCLU7416136",
             "arrival": "11/12/2025",
