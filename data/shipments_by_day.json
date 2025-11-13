@@ -618,6 +618,20 @@
             "arrival": "11/22/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "CSNU6743132",
+            "arrival": "11/22/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP3",
+            "reference": "TIIU4935716",
+            "arrival": "11/22/2025",
+            "departure": "TBD",
+            "type": "TR"
         }
     ],
     "Sunday": [
