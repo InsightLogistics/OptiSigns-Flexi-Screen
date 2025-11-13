@@ -565,13 +565,6 @@
             "arrival": "11/20/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/13/2025",
-            "type": "OUT"
         }
     ],
     "Friday": [
@@ -604,6 +597,27 @@
             "arrival": "11/15/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "OP2",
+            "reference": "TCLU5272611",
+            "arrival": "11/22/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "KOCU4876370",
+            "arrival": "11/22/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "FCIU5551834",
+            "arrival": "11/22/2025",
+            "departure": "TBD",
+            "type": "TR"
         }
     ],
     "Sunday": [
