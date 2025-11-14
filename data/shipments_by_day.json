@@ -209,6 +209,13 @@
             "arrival": "11/24/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "11/17/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Tuesday": [
@@ -246,6 +253,13 @@
             "arrival": "11/18/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "11/18/2025",
+            "type": "OUT"
         }
     ],
     "Wednesday": [
@@ -493,6 +507,13 @@
             "arrival": "11/19/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "11/19/2025",
+            "type": "OUT"
         }
     ],
     "Thursday": [
