@@ -170,22 +170,8 @@
         },
         {
             "customer": "OP3",
-            "reference": "CSNU8205943",
-            "arrival": "11/13/2025",
-            "departure": "11/17/2025",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
             "reference": "FFAU2451876",
             "arrival": "11/14/2025",
-            "departure": "11/17/2025",
-            "type": "TR"
-        },
-        {
-            "customer": "OP3",
-            "reference": "TGBU4923151",
-            "arrival": "11/13/2025",
             "departure": "11/17/2025",
             "type": "TR"
         },
@@ -365,6 +351,13 @@
             "arrival": "11/18/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "139-47590034",
+            "arrival": "11/18/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Wednesday": [
