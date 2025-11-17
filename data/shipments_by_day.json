@@ -169,20 +169,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/17/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/17/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "OP2",
             "reference": "BMOU2867522",
             "arrival": "11/24/2025",
