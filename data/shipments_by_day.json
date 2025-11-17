@@ -365,13 +365,6 @@
             "arrival": "11/18/2025",
             "departure": "TBD",
             "type": "TR"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/18/2025",
-            "type": "OUT"
         }
     ],
     "Wednesday": [
