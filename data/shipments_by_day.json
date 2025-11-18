@@ -197,13 +197,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "11/17/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
             "customer": "OP3",
             "reference": "CAAU5250531",
             "arrival": "11/24/2025",
