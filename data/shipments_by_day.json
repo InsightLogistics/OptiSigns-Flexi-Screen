@@ -265,6 +265,13 @@
             "arrival": "11/24/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "PETSNOLOGY",
+            "reference": "RFCU5012648",
+            "arrival": "11/24/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Tuesday": [
@@ -295,6 +302,48 @@
             "arrival": "11/18/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "OP2",
+            "reference": "BEAU6290814",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SMCU1095531",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SMCU1306280",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "CAAU9540436",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "RFCU4052230",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "SMCU1014951",
+            "arrival": "11/18/2025",
+            "departure": "TBD",
+            "type": "TR"
         },
         {
             "customer": "TFA",
@@ -503,13 +552,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "BEAU6290814",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "CAAU9508305",
             "arrival": "11/19/2025",
             "departure": "TBD",
@@ -524,28 +566,7 @@
         },
         {
             "customer": "OP2",
-            "reference": "SMCU1095531",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1306280",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "CAAU9507757",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "CAAU9540436",
             "arrival": "11/19/2025",
             "departure": "TBD",
             "type": "TR"
@@ -573,20 +594,6 @@
         },
         {
             "customer": "OP2",
-            "reference": "RFCU4052230",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "SMCU1014951",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
             "reference": "SMCU1260533",
             "arrival": "11/19/2025",
             "departure": "TBD",
@@ -598,6 +605,13 @@
             "arrival": "-",
             "departure": "11/19/2025",
             "type": "OUT"
+        },
+        {
+            "customer": "PETSNOLOGY",
+            "reference": "CAIU9955760",
+            "arrival": "11/19/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Thursday": [
@@ -658,6 +672,13 @@
             "arrival": "12/5/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "11/21/2025",
+            "type": "OUT"
         }
     ],
     "Saturday": [
