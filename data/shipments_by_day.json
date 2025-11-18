@@ -347,13 +347,6 @@
         },
         {
             "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/18/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
             "reference": "139-47590034",
             "arrival": "11/18/2025",
             "departure": "-",
