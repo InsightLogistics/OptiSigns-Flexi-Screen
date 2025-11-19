@@ -579,13 +579,6 @@
             "type": "TR"
         },
         {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/19/2025",
-            "type": "OUT"
-        },
-        {
             "customer": "PETSNOLOGY",
             "reference": "SELU4026302",
             "arrival": "11/19/2025",
@@ -618,6 +611,27 @@
         {
             "customer": "OP2",
             "reference": "TCNU4242754",
+            "arrival": "11/20/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "TCLU5272611",
+            "arrival": "11/20/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "KOCU4876370",
+            "arrival": "11/20/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "FCIU5551834",
             "arrival": "11/20/2025",
             "departure": "TBD",
             "type": "TR"
@@ -668,27 +682,6 @@
         }
     ],
     "Saturday": [
-        {
-            "customer": "OP2",
-            "reference": "TCLU5272611",
-            "arrival": "11/22/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "KOCU4876370",
-            "arrival": "11/22/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "FCIU5551834",
-            "arrival": "11/22/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
         {
             "customer": "OP3",
             "reference": "CSNU6743132",
