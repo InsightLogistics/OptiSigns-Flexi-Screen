@@ -461,6 +461,20 @@
         },
         {
             "customer": "OP2",
+            "reference": "SMCU1225390",
+            "arrival": "11/19/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
+            "reference": "BSIU8500669",
+            "arrival": "11/19/2025",
+            "departure": "TBD",
+            "type": "TR"
+        },
+        {
+            "customer": "OP2",
             "reference": "CAAU9508305",
             "arrival": "11/19/2025",
             "departure": "TBD",
