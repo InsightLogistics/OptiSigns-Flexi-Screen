@@ -279,6 +279,13 @@
             "arrival": "11/24/2025",
             "departure": "-",
             "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "11/24/2025",
+            "type": "OUT"
         }
     ],
     "Tuesday": [
