@@ -637,27 +637,6 @@
             "arrival": "-",
             "departure": "11/21/2025",
             "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/21/2025",
-            "type": "OUT"
-        },
-        {
-            "customer": "TFA",
-            "reference": "MAGU5530266",
-            "arrival": "11/21/2025",
-            "departure": "-",
-            "type": "IN"
-        },
-        {
-            "customer": "TFA",
-            "reference": "TGHU6184453",
-            "arrival": "11/21/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Saturday": [
