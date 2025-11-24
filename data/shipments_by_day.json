@@ -286,13 +286,6 @@
             "arrival": "-",
             "departure": "11/24/2025",
             "type": "OUT"
-        },
-        {
-            "customer": "OP4",
-            "reference": "FCIU5270251",
-            "arrival": "11/24/2025",
-            "departure": "-",
-            "type": "IN"
         }
     ],
     "Tuesday": [
@@ -344,6 +337,20 @@
             "arrival": "12/2/2025",
             "departure": "TBD",
             "type": "TR"
+        },
+        {
+            "customer": "OP4",
+            "reference": "FCIU5270251",
+            "arrival": "11/25/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "TFA",
+            "reference": "139-47590045",
+            "arrival": "11/25/2025",
+            "departure": "-",
+            "type": "IN"
         }
     ],
     "Wednesday": [
@@ -490,13 +497,6 @@
         {
             "customer": "OP2",
             "reference": "SMCU1299828",
-            "arrival": "11/19/2025",
-            "departure": "TBD",
-            "type": "TR"
-        },
-        {
-            "customer": "OP2",
-            "reference": "BSIU8500669",
             "arrival": "11/19/2025",
             "departure": "TBD",
             "type": "TR"
