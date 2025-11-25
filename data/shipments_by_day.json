@@ -212,10 +212,10 @@
         },
         {
             "customer": "TFA",
-            "reference": "FSCU7214739",
-            "arrival": "11/24/2025",
-            "departure": "-",
-            "type": "IN"
+            "reference": "N/A",
+            "arrival": "-",
+            "departure": "12/1/2025",
+            "type": "OUT"
         }
     ],
     "Tuesday": [
@@ -341,6 +341,13 @@
         {
             "customer": "OP3",
             "reference": "K-F25-049",
+            "arrival": "11/25/2025",
+            "departure": "-",
+            "type": "IN"
+        },
+        {
+            "customer": "OP4",
+            "reference": "ECMU7102064",
             "arrival": "11/25/2025",
             "departure": "-",
             "type": "IN"
@@ -602,13 +609,6 @@
             "arrival": "11/21/2025",
             "departure": "-",
             "type": "IN"
-        },
-        {
-            "customer": "TFA",
-            "reference": "N/A",
-            "arrival": "-",
-            "departure": "11/28/2025",
-            "type": "OUT"
         },
         {
             "customer": "TFA",
